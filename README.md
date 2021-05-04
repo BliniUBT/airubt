@@ -1,2 +1,2 @@
 # airubt
-The Inventory where will be hosted the project of the LAB1-COURSE subject. 
+The Inventory where the project of the LAB-COURSE 1 will be hosted. 
