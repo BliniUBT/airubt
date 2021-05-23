@@ -1,27 +1,33 @@
 import React from 'react'
-import './Header.css'
+import '/Header.css'
 import SearchIcon from '@material-ui/icons/Search';
-import LanguageIcon from '@material-ui/icons/Language';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import{ Avatar } from '@material-ui/core'
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import FlightIcon from '@material-ui/icons/Flight';
+
+
+
 function Header() {
     return (
         <div className='header'>
-            <img 
-            className="header__icon"
-            src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png" alt="logo airbnb"/>
+           
+            <FlightIcon className="header__icon" />
+           
         <div className='header__center'>
-            <input type="text"/>
-            <SearchIcon/>
-        
+            <input type="text" placeholder="Search..."/>
+            
+            <SearchIcon />
+            
 
         </div>
+       
+                
+            
+       
+        
+        
         <div className="header__right">
-            <p>Become a Host </p>
-            <LanguageIcon/>
-            <ExpandMoreIcon/>
-            <Avatar/>
+            <button id="loginbutton">Log In</button>
+            <button id="signupbutton">Sign Up</button>
+            
         </div>
         
         </div>
