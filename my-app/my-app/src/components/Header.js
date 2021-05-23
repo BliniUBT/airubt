@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/Header.css'
+import '../assets/css/header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import FlightIcon from '@material-ui/icons/Flight';
 
