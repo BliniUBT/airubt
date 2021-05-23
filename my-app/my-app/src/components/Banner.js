@@ -1,10 +1,12 @@
 import React from 'react';
 import '../assets/css/banner.css';
+import Header from './Header';
 
 function Banner(){
     return(
         <div className='banner'>
             {/*Header inside banner1 */}
+            <Header />
             <div className="banner-info">
                 <h1>Your go-to travel guide</h1>
                 <h2>find the best place for <span id='you'>you</span></h2>
