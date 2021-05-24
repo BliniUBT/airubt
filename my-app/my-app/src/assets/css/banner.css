@@ -1,6 +1,6 @@
 .banner{
     background-image: url("../images/timothy-simon-CF4c2GAker4-unsplash.jpg");
-    height: 60vh;
+    height: 75vh;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 }
 .banner-info{
     padding-left: 260px;
-    padding-top: 180px;
+    padding-top: 260px;
 }
 
 .banner h1{
