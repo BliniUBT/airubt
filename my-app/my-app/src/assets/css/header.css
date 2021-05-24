@@ -3,7 +3,7 @@
     /*justify-content: space-between;*/
     justify-content: space-evenly;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top:0;
     z-index: 100;
     width: 100%;
@@ -26,7 +26,7 @@
     align-items: center;
     max-width:fit-content;
     padding: 10px;
-    height: 30px;
+    height: 20px;
     border: 1px solid darkgrey;
     border-radius: 999px;
     background-color:whitesmoke;
@@ -59,9 +59,15 @@
   }
 
   #loginbutton{
+    color: #2F4AD8;
     padding-right: 25px;
     border-style: none;
     background-color: transparent;
+    border: 1px solid #2F4AD8;
+    border-radius: 20px;
+    padding: 7px;
+    width: 100px;
+    cursor: pointer;
   }
 
   #signupbutton{
@@ -69,8 +75,10 @@
     border-radius:100px;
     background-color: #2F4AD8;
     color:white;
-    height:30px;
-    width:40%;
+    padding: 7px;
+    width:100px;
+    margin-left: 10px;
+    cursor: pointer;
   }
   
  
