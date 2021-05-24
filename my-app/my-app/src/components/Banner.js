@@ -16,10 +16,7 @@ function Banner(){
                 
             </div>
         </div>
-
-
-
-
+        
 
     )
 }

@@ -7,10 +7,11 @@ li{
        display: flex;
        flex-direction: row;
        justify-content: space-evenly;
-       position: absolute;
+       position: relative;
        bottom: 0;
        left: 0;
        right: 0;
        align-items: center;
        background-color: white;
+       margin-top: 60px;
    }

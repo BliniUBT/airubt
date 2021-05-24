@@ -4,6 +4,7 @@ import './assets/css/style.css';
 // import Home from './components/Home';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
+import Cards from './components/Cards';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Banner />
 
       {/* Cards */}
+      <Cards />
 
       {/* Footer */}
       <Footer />

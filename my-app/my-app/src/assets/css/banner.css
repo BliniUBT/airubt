@@ -25,14 +25,11 @@
 }
 
 #you{
-    color: rgb(59, 59, 206);
+    color: #2F4AD8;
 }
-button{
-    background-color: rgb(73, 73, 233);
-    border-radius: 10px;
-}
+
 #banner-btn1{
-    background-color: rgb(73, 73, 233);
+    background-color: #2F4AD8;
     color: white;
     border-radius: 20px;
     border: none;
@@ -40,13 +37,13 @@ button{
     height: 30px;
     width: 100px;
     margin-top: 10px;
-    
+    border-radius: 10px;
 }
 
 #banner-btn2{
     margin-left: 10px;
     background-color: transparent;
-    color: rgb(73, 73, 233);
+    color: #2F4AD8;
     border-radius: 20px;
     font-size:15px;
     height: 30px;
@@ -54,5 +51,6 @@ button{
     border: 1px solid ;
     margin-top: 10px;
     margin-right: 185px;
-
+    border-radius: 10px;
 }
+

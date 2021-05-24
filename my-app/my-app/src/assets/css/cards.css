@@ -1,0 +1,121 @@
+.cards-info{
+    width: 59.9%;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid white;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 10px lightblue;
+
+}
+
+.cards-info h1{
+    padding: 30px;
+    font-weight: 400;
+
+}
+.cards-info p{
+    padding: 0px 30px 35px 30px;
+
+}
+.card-container{
+    margin: auto;
+    height: auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.card-container h1{
+    padding-top: 70px;
+    font-weight: 400;
+}
+
+.card-1{
+    display: inline-block;
+    background-image: url("../images/hermansyah-7uXn7nudorc-unsplash\ \(1\).jpg");
+    position: relative;
+    height: 60vh;
+    width: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    margin-right: 68px;
+
+}
+
+.card-1 h3{
+    margin-top: 78%;
+    margin-right: 50%;
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.card-2{
+    display: inline-block;
+    background-image: url("../images/daniel-j-schwarz-n6m7d5bHLHc-unsplash.jpg");
+    position: relative;
+    height: 60vh;
+    width: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.card-2 h3{
+    margin-top: 78%;
+    margin-right: 30%;
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.card-3{
+    background-image: url("../images/pexels-monstera-5876657.jpg");
+    position: relative;
+    height: 60vh;
+    width: 129vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+
+.card-3 h2{
+    color: white;
+    padding-top: 80px;
+    font-size: 40px;
+    font-weight: 400;
+    padding-left: 53%;
+}
+
+.card-3 h4{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    padding-left: 53%;
+}
+
+.card-3 button{
+    margin-left: 80%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 7px;
+    width: 100px;
+    background-color: #2f4ad8;
+    color: white;
+}
+
+.card1-2-cont{
+    width: auto;
+    padding-top: 40px;
+    padding-bottom: 65px;
+
+}
