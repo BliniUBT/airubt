@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* Banner */}
-
+      <Banner />
       {/* Banner */}
       {/* Cards */}
 
@@ -20,6 +20,7 @@ function App() {
 
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 }
