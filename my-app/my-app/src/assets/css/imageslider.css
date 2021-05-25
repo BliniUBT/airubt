@@ -1,0 +1,90 @@
+.slide.active{
+    position: relative;
+    height: 75vh;
+    /* background-size: cover; */
+  }
+  
+  .image{
+    position: relative;
+    height: 75vh;
+    width: 100%;
+  }
+  
+  .banner-info{
+  position: absolute;
+  z-index: 100;
+  margin-top: 22%;
+  margin-left: 20%;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 33%;
+    right: 32px;
+    font-size: 3rem !important;
+    color: lightgray;
+    z-index: 10;
+    cursor: pointer;
+    /* user-select: none; */
+  }
+  
+  .left-arrow {
+    position: absolute;
+    top: 33%;
+    left: 32px;
+    font-size: 3rem !important;
+    color: lightgray;
+    z-index: 10;
+    cursor: pointer;
+    /* user-select: none; */
+  }
+  .banner-info h1{
+    font-weight: 400;
+    font-size: 40px;
+    
+  }
+  
+  .banner-info h2{
+    font-weight: 400;
+  
+  }
+  
+  #you{
+    color: #2F4AD8;
+  }
+  
+  #banner-btn1{
+    background-color: #2F4AD8;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size:15px;
+    padding: 7px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  #banner-btn2{
+    margin-left: 10px;
+    background-color: transparent;
+    color: #2F4AD8;
+    border-radius: 20px;
+    font-size:15px;
+    padding: 7px;
+    width: 100px;
+    border: 1px solid ;
+    margin-top: 10px;
+    margin-right: 185px;
+    cursor: pointer;
+  }
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }
