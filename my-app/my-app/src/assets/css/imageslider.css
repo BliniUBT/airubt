@@ -1,6 +1,10 @@
+.slider{
+  width: 100%;
+}
 .slide.active{
     position: relative;
     height: 75vh;
+    width: 96.1%;
     /* background-size: cover; */
   }
   
