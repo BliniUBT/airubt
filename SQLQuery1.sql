@@ -34,14 +34,14 @@ Create table City(
 	ZipCode int  not null,
 	Shteti varchar(100) not null
 )
-
+Select * from City
 ---------------------------------------------------------------------------------------------------------------------
 
 
 Create table Categories(
 	CategoriesName varchar(50) primary key
 )
-
+Select * from Categories
 ---------------------------------------------------------------------------------------------------------------------
 
 Create table Apartment(
