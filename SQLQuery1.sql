@@ -22,8 +22,10 @@ create table Hosts(
 	Email varchar(250) not null,
 	Password varchar(250) not null,
 )
-Alter table Users add Age as DATEDIFF(YEAR, DateOfBirth, GETDATE())
-ALter table Users add PhoneNumber varchar(100)
+Alter table Hosts add Age as DATEDIFF(YEAR, DateOfBirth, GETDATE())
+ALter table Hosts add PhoneNumber varchar(100)
+
+Select * from Hosts
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -42,4 +44,34 @@ Create table Categories(
 
 ---------------------------------------------------------------------------------------------------------------------
 
+Create table Apartment(
+	ApartmentID int IDENTITY(1,1) primary key,
+	Address varchar(200),
+	Rooms int,
+	Space float,
+	MaxGuests int,
+	Toilets int,
+	Terrace bit,
+	Garden bit,
+	Garage bit,
+	Checkin time,
+	Checkout time,
+	Review float,
+	Notes varchar(500),
+	HostID int foreign key references Hosts(HostID)
+)
+
+---------------------------------------------------------------------------------------------------------------------
+
+Create table Appointment(
+	AppointmentID int identity(1,1) primary key,
+	Guests int,
+	StartDate date,
+	EndDate date,
+	Notes varchar(250),
+	UserID int foreign key references Users(UserID),
+	ApartmentID int foreign key references Apartment(ApartmentID)
+)
+
+---------------------------------------------------------------------------------------------------------------------
 
