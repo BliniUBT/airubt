@@ -6,11 +6,11 @@ create table Users(
 	Name varchar(250) not null,
 	LastName varchar(250) not null,
 	DateOfBirth date not null,
-	Age DATEDIFF(YEAR, DateOfBirth, GETDATE()),
 	Address varchar(250) not null,
 	Email varchar(250) not null,
 	Password varchar(250) not null,
 	Role bit
 )
+Alter table Users add Age as DATEDIFF(YEAR, DateOfBirth, GETDATE())
 
 
