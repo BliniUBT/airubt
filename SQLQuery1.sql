@@ -30,7 +30,7 @@ Select * from Hosts
 ---------------------------------------------------------------------------------------------------------------------
 
 Create table City(
-	CityName varchar primary key,
+	CityName varchar(250) primary key,
 	ZipCode int  not null,
 	Shteti varchar(100) not null
 )
@@ -60,6 +60,8 @@ Create table Apartment(
 	Notes varchar(500),
 	HostID int foreign key references Hosts(HostID)
 )
+Alter table Apartment add City varchar(250) foreign key references City(CityName)
+Alter table Apartment add Category varchar(50) foreign key references Categories(CategoriesName)
 
 ---------------------------------------------------------------------------------------------------------------------
 
