@@ -13,7 +13,8 @@ create table Users(
 )
 Alter table Users add Age as DATEDIFF(YEAR, DateOfBirth, GETDATE())\
 ALter table Users add PhoneNumber varchar(100)
-select * from Users
+Alter table Users drop column Address
+Select * from Users
 
 Create table City(
 	CityName varchar primary key,
