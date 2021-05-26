@@ -8,6 +8,5 @@ Shteti varchar(100) not null
 )
 
 Create table Categories(
-CategoriesID int primary key,
-CategoriesName varchar (100),
+CategoriesName varchar(50) primary key
 )
