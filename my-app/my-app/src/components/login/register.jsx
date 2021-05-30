@@ -12,28 +12,30 @@ export class Register extends React.Component {
                 <div className="headero">Register</div>
                 <div className="contento">
                     <div className="imageo">
-                        <img src={loginImg} />
+                        <img src={loginImg}/>
                     </div>
                     <div className="formo">
                         <div className="formo-group">
                             <label htmlFor="firstname">First Name</label>
-                            <input type="text" name="firstname" placeholder="First Name" />
+                            <input type="text" name="firstname" placeholder="First Name"/>
                         </div>
                         <div className="formo-group">
                             <label htmlFor="lastname">Last Name</label>
-                            <input type="text" name="lastname" placeholder="Last Name" />
+                            <input type="text" name="lastname" placeholder="Last Name"/>
                         </div>
+                    </div>
+                    <div className="formo">
                         <div className="formo-group">
                             <label htmlFor="email">E-Mail</label>
-                            <input type="text" name="email" placeholder="E-Mail" />
+                            <input type="text" name="email" placeholder="E-Mail"/>
                         </div>
                         <div className="formo-group">
                             <label htmlFor="password">Password</label>
-                            <input type="password" name="password" placeholder="password" />
+                            <input type="password" name="password" placeholder="password"/>
                         </div>
                         <div className="formo-group">
                             <label htmlFor="cfpassword">Password</label>
-                            <input type="password" name="cfpassword" placeholder="Confirm Password" />
+                            <input type="password" name="cfpassword" placeholder="Confirm Password"/>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .Appo-logo {
@@ -41,8 +41,8 @@
 
 //Login Main Container
 .logino {
-  width: 27em;
-  height: 40em;
+  width: 50em;
+  height: 50em;
   //min-height: 44em;
   display: flex;
   justify-content: center;
@@ -111,9 +111,9 @@
 }
 
 .btno {
-  font-size: 21px;
-  padding: 5px 20px;
-  border: 0;
+  font-size: 31px;
+  padding: 5px 200px;
+  border: 2px solid dodgerblue;
   background-color: #3498db;
   color: #fff;
   border-radius: 3px;
