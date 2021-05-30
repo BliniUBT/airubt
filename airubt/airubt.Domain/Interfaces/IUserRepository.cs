@@ -13,7 +13,7 @@ namespace airubt.Domain.Interfaces
         Task<IEnumerable> GetUsers();
         Task<User> GetUserById(int id);
         void CreateUser(User user);
-        Task UpdateUser(User user);
+        void UpdateUser(User user);
         Task DeleteUser(User user);
     }
 }

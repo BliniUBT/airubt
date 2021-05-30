@@ -24,7 +24,9 @@ namespace airubt.Infrastructure.Repositories
             _ctx.SaveChanges();
         }
 
-        public Task DeleteHost(Host host)
+
+
+        public Task<Host> DeleteHost(int id)
         {
             throw new NotImplementedException();
         }

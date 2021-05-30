@@ -13,6 +13,6 @@ namespace airubt.Domain.Interfaces
         Task<Host> GetHostById(int id);
         void CreateHost(Host host);
         Task UpdateHost(Host host);
-        Task DeleteHost(Host host);
+        Task<Host> DeleteHost(int id);
     }
 }

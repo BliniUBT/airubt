@@ -1,5 +1,6 @@
 import '../../assets/css/sidebar.css';
 
+
 import React from 'react'
 
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
@@ -18,14 +19,14 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             </div>
 
             <div className="sidebar_menu">
-                <div className="sidebar_link active_menu_link">
+                {/* <div className="sidebar_link active_menu_link">
                     <i>xxx</i>
                     <a href="#">Dashboard</a>
-                </div>
-                <h2>MNG</h2>
+                </div> */}
+                <h2>Dashboard</h2>
                 <div className="sidebar_link">
                     <i>xxxx</i>
-                    <a href="#">Admin Managment</a>
+                    <a href="./Users">Users</a>
                 </div>
                 <div className="sidebar_link">
                     <i>xxxx</i>

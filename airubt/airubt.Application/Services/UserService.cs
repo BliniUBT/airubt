@@ -22,6 +22,11 @@ namespace airubt.Application.Services
             _userRepository.CreateUser(user);
         }
 
+        public void UpdateUser(User user)
+        {
+            _userRepository.UpdateUser(user);
+        }
+
         public async Task<IEnumerable> UsersList()
         {
             return await _userRepository.GetUsers();

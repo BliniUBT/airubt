@@ -22,10 +22,18 @@ namespace airubt.API.Controllers
 
         [HttpGet("getUsers")]
         public async Task<IActionResult> GetUsers() => Ok(await _userService.UsersList());
+
         [HttpPost("createUser")]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
             _userService.CreateUser(user);
+            return Ok();
+        }
+
+        [HttpPut("updateUser")]
+        public async Task<IActionResult> UpdateUser([FromBody] User user)
+        {
+            _userService.UpdateUser(user);
             return Ok();
         }
     }

@@ -26,5 +26,11 @@ namespace airubt.Application.Services
         {
             return await _hostRepository.GetHosts();
         }
+        public Task<Host> DeleteHost(int id)
+        {
+            return null;
+        }
+
+
     }
 }

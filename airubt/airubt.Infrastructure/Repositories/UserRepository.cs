@@ -38,9 +38,10 @@ namespace airubt.Infrastructure.Repositories
             return await _ctx.Users.ToListAsync();
         }
 
-        public Task UpdateUser(User user)
+        public void UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            _ctx.Users.Update(user);
+            _ctx.SaveChanges();
         }
     }
 }

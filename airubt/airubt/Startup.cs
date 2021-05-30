@@ -33,6 +33,9 @@ namespace airubt
             services.AddControllers();
             services.AddDbContext<airubtContext>(
                 options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+            services.AddCors();
+
+
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IHostService, HostService>();
@@ -50,6 +53,8 @@ namespace airubt
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {
