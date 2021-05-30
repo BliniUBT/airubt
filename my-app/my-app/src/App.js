@@ -1,6 +1,7 @@
 import './index.css';
 import './assets/css/style.css';
-import {Login} from "./components/login/index";
+import ForLogin from './forlogin';
+import Header from './components/Header'
 
 // import Home from './components/Home';
 import Footer from './components/Footer';
@@ -17,8 +18,9 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Switch>
+                    {/*<Route path="*" component={Header}/>*/}
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/login" component={ForLogin}/>
                     <Route path="/admin" component={Admin}/>
                 </Switch>
             </BrowserRouter>

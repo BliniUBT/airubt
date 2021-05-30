@@ -9,25 +9,25 @@ export class Login extends React.Component {
     }
 
     render() {
-        return <div className="base-container">
-            <div className="header">Login</div>
-            <div className="content">
-                <div className="image">
+        return <div className="base-containero">
+            <div className="headero">Login</div>
+            <div className="contento">
+                <div className="imageo">
                     <img src={LoginImg}/>
                 </div>
 
-                <div className="form">
-                    <div className="form-group">
+                <div className="formo">
+                    <div className="formo-group">
                         <label htmlFor="email">E-Mail</label>
                         <input type="email" name="email" placeholder="E-Mail"/>
                     </div>
-                    <div className="form-group">
+                    <div className="formo-group">
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" placeholder="Password"/>
                     </div>
                 </div>
             </div>
-            <div className="footer">
+            <div className="footero">
                 <button type="button" className="btn">Login</button>
             </div>
         </div>
