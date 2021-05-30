@@ -20,6 +20,7 @@ namespace airubt.Infrastructure.Repositories
         public void CreateUser(User user)
         {
             _ctx.Users.AddAsync(user);
+            _ctx.SaveChanges();
         }
 
         public Task DeleteUser(User user)

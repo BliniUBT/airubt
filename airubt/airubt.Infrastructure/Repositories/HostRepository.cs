@@ -21,6 +21,7 @@ namespace airubt.Infrastructure.Repositories
         public void CreateHost(Host host)
         {
             _ctx.Hosts.AddAsync(host);
+            _ctx.SaveChanges();
         }
 
         public Task DeleteHost(Host host)
