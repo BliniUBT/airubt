@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import {Table, Button, ButtonToolbar} from 'react-bootstrap';
-import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import {AddUserModel} from './AddUserModel';
 import {EditUserModel} from './EditUserModel';
 import Admin from '../Admin';
@@ -45,6 +44,7 @@ export class Users extends Component{
         const {user, id, userfname, userlname, useremail, birthdate, userage, userphonenumber} = this.state;
         let addModalClose=()=>this.setState({addModalShow:false});
         let editModalClose=()=>this.setState({editModalShow:false});
+
         return(
             <div>
                 {/* <button className="mt-2">Add book</button> */}

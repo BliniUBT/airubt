@@ -12,7 +12,6 @@ import {SliderData} from './components/SliderData';
 import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Admin from './admin/components/Admin';
-import Users from './admin/components/User/Users';
 
 function App() {
     return (
@@ -23,7 +22,6 @@ function App() {
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/login" component={ForLogin}/>
                     <Route path="/admin" component={Admin}/>
-                    <Route exact path="/users" component={Users}/>
                 </Switch>
             </BrowserRouter>
         </div>
