@@ -21,11 +21,11 @@ namespace airubt.API.Controllers
         }
 
         [HttpGet("getHosts")]
-        public async Task<IActionResult> GetHosts() => Ok(await _hostService.HostList());
+        public async Task<IActionResult> GetHosts() => Ok(await _hostService.HostsList());
         [HttpPost("createHost")]
-        public async Task<IActionResult> CreateHost([FromBody] Host user)
+        public async Task<IActionResult> CreateHost([FromBody] Host host)
         {
-            _userService.CreateUser(user);
+            _hostService.CreateHost(host);
             return Ok();
         }
     }
