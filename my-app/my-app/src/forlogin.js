@@ -1,8 +1,8 @@
 import React from "react";
-import "./App.scss";
+import "./app.scss";
 import { Login, Register } from "./components/login/index";
 
-class App extends React.Component {
+class ForLogin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +33,7 @@ class App extends React.Component {
         const current = isLogginActive ? "Register" : "Login";
         const currentActive = isLogginActive ? "login" : "register";
         return (
-            <div className="App">
+            <div className="Appo">
                 <div className="login">
                     <div className="container" ref={ref => (this.container = ref)}>
                         {isLogginActive && (
@@ -69,4 +69,4 @@ const RightSide = props => {
     );
 };
 
-export default App;
+export default ForLogin;

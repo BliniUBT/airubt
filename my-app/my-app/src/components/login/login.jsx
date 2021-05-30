@@ -1,5 +1,7 @@
 import React from "react";
-import loginImg from "../../login.svg";
+import LoginImg from "../login/assets/login.svg";
+import "./style.scss";
+
 
 export class Login extends React.Component {
     constructor(props) {
@@ -7,30 +9,27 @@ export class Login extends React.Component {
     }
 
     render() {
-        return (
-            <div className="base-container" ref={this.props.containerRef}>
-                <div className="header">Login</div>
-                <div className="content">
-                    <div className="image">
-                        <img src={loginImg} />
-                    </div>
-                    <div className="form">
-                        <div className="form-group">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" name="username" placeholder="username" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" placeholder="password" />
-                        </div>
-                    </div>
+        return <div className="base-containero">
+            <div className="headero">Login</div>
+            <div className="contento">
+                <div className="imageo">
+                    <img src={LoginImg}/>
                 </div>
-                <div className="footer">
-                    <button type="button" className="btn">
-                        Login
-          </button>
+
+                <div className="formo">
+                    <div className="formo-group">
+                        <label htmlFor="email">E-Mail</label>
+                        <input type="email" name="email" placeholder="E-Mail"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" placeholder="Password"/>
+                    </div>
                 </div>
             </div>
-        );
+            <div className="footero">
+                <button type="button" className="btn">Login</button>
+            </div>
+        </div>
     }
 }

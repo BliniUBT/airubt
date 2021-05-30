@@ -1,15 +1,15 @@
-.base-container {
+.base-containero {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  .header {
+  .headero{
     font-size: 24px;
     font-family: "Open Sans", sans-serif;
   }
 
-  .content {
+  .contento {
     display: flex;
     flex-direction: column;
 
@@ -21,13 +21,13 @@
       }
     }
 
-    .form {
+    .formo {
       margin-top: 2em;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .form-group {
+      .formo-group {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -61,7 +61,7 @@
     }
   }
 
-  .footer {
+  .footero {
     margin-top: 3em;
   }
 }

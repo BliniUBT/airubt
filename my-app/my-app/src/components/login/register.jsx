@@ -1,5 +1,6 @@
 import React from "react";
-import loginImg from "../../login.svg";
+import LoginImg from "../login/assets/login.svg";
+
 
 export class Register extends React.Component {
     constructor(props) {
@@ -7,34 +8,39 @@ export class Register extends React.Component {
     }
 
     render() {
-        return (
-            <div className="base-container" ref={this.props.containerRef}>
-                <div className="header">Register</div>
-                <div className="content">
-                    <div className="image">
-                        <img src={loginImg} />
-                    </div>
-                    <div className="form">
-                        <div className="form-group">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" name="username" placeholder="username" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="text" name="email" placeholder="email" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="text" name="password" placeholder="password" />
-                        </div>
-                    </div>
+        return <div className="base-containero">
+            <div className="headero">Register</div>
+            <div className="contento">
+                <div className="image">
+                    <img src={LoginImg}/>
                 </div>
-                <div className="footer">
-                    <button type="button" className="btn">
-                        Register
-          </button>
+
+                <div className="formo">
+                    <div className="formo-group">
+                        <label htmlFor="firstname">First Name</label>
+                        <input type="text" name="firstname" placeholder="First Name"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="lastname">Last Name</label>
+                        <input type="text" name="lastname" placeholder="Last Name"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="email">E-mail</label>
+                        <input type="email" name="email" placeholder="E-Mail"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="dob">Date of Birth</label>
+                        <input type="date" name="dob" placeholder="Date of Birth"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" placeholder="Password"/>
+                    </div>
                 </div>
             </div>
-        );
+            <div className="footero">
+                <button type="button" className="btn">Register</button>
+            </div>
+        </div>
     }
 }
