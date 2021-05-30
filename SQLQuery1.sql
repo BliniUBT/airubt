@@ -1,51 +1,47 @@
 Create Database airubt
 use airubt
 
-create table Users(
-	UserID int identity(1,1) primary key,
-	Name varchar(250) not null,
-	LastName varchar(250) not null,
-	DateOfBirth date not null,
+create table [User](
+	ID int identity(1,1) primary key,
+	Firstname varchar(250) not null,
+	Lastname varchar(250) not null,
+	BirthDate date not null,
 	Email varchar(250) not null,
 	Password varchar(250) not null,
 )
-Alter table Users add Age as DATEDIFF(YEAR, DateOfBirth, GETDATE())
-ALter table Users add PhoneNumber varchar(100)
+Alter table [User] add Age as DATEDIFF(YEAR, BirthDate, GETDATE())
+ALter table [User] add PhoneNumber varchar(100)
 
-Select * from Users
 ---------------------------------------------------------------------------------------------------------------------
-create table Hosts(
-	HostID int identity(1,1) primary key,
-	Name varchar(250) not null,
-	LastName varchar(250) not null,
-	DateOfBirth date not null,
+create table Host(
+	ID int identity(1,1) primary key,
+	Firstname varchar(250) not null,
+	Lastname varchar(250) not null,
+	BirthDate date not null,
 	Email varchar(250) not null,
 	Password varchar(250) not null,
 )
-Alter table Hosts add Age as DATEDIFF(YEAR, DateOfBirth, GETDATE())
-ALter table Hosts add PhoneNumber varchar(100)
-
-Select * from Hosts
+Alter table Host add Age as DATEDIFF(YEAR, BirthDate, GETDATE())
+ALter table Host add PhoneNumber varchar(100)
 
 ---------------------------------------------------------------------------------------------------------------------
 
 Create table City(
-	CityName varchar(250) primary key,
+	Name varchar(250) primary key,
 	ZipCode int  not null,
-	Shteti varchar(100) not null
+	Country varchar(100) not null
 )
 Select * from City
 ---------------------------------------------------------------------------------------------------------------------
 
 
-Create table Categories(
-	CategoriesName varchar(50) primary key
+Create table Category(
+	Name varchar(50) primary key
 )
-Select * from Categories
 ---------------------------------------------------------------------------------------------------------------------
 
 Create table Apartment(
-	ApartmentID int IDENTITY(1,1) primary key,
+	ID int IDENTITY(1,1) primary key,
 	Address varchar(200),
 	Rooms int,
 	Space float,
@@ -58,21 +54,21 @@ Create table Apartment(
 	Checkout time,
 	Review float,
 	Notes varchar(500),
-	HostID int foreign key references Hosts(HostID)
+	HostID int foreign key references Host(ID)
 )
-Alter table Apartment add City varchar(250) foreign key references City(CityName)
-Alter table Apartment add Category varchar(50) foreign key references Categories(CategoriesName)
+Alter table Apartment add City varchar(250) foreign key references City(Name)
+Alter table Apartment add Category varchar(50) foreign key references Category(Name)
 
 ---------------------------------------------------------------------------------------------------------------------
 
 Create table Appointment(
-	AppointmentID int identity(1,1) primary key,
+	ID int identity(1,1) primary key,
 	Guests int,
 	StartDate date,
 	EndDate date,
 	Notes varchar(250),
-	UserID int foreign key references Users(UserID),
-	ApartmentID int foreign key references Apartment(ApartmentID)
+	UserID int foreign key references [User](ID),
+	ApartmentID int foreign key references Apartment(ID)
 )
 
 ---------------------------------------------------------------------------------------------------------------------

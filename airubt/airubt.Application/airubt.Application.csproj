@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\airubt.Domain\airubt.Domain.csproj" />
+    <ProjectReference Include="..\airubt.Infrastructure\airubt.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,6 +1,12 @@
+using airubt.Application.Interfaces;
+using airubt.Application.Services;
+using airubt.Domain.Interfaces;
+using airubt.Infrastructure.Context;
+using airubt.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +31,12 @@ namespace airubt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<airubtContext>(
+                options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IHostService, HostService>();
+            services.AddScoped<IHostRepository, HostRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
