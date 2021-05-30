@@ -28,7 +28,7 @@ export class Login extends React.Component {
                 </div>
             </div>
             <div className="footero">
-                <button type="button" className="btn">Login</button>
+                <button type="button" className="btno">Login</button>
             </div>
         </div>
     }

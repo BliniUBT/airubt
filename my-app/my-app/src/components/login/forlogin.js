@@ -1,6 +1,6 @@
 import React from "react";
-import "./app.scss";
-import { Login, Register } from "./components/login/index";
+import "./assets/ForLogin.scss";
+import { Login, Register } from "./index";
 
 class ForLogin extends React.Component {
     constructor(props) {
@@ -34,8 +34,8 @@ class ForLogin extends React.Component {
         const currentActive = isLogginActive ? "login" : "register";
         return (
             <div className="Appo">
-                <div className="login">
-                    <div className="container" ref={ref => (this.container = ref)}>
+                <div className="logino">
+                    <div className="containero" ref={ref => (this.container = ref)}>
                         {isLogginActive && (
                             <Login containerRef={ref => (this.current = ref)} />
                         )}
@@ -58,12 +58,12 @@ class ForLogin extends React.Component {
 const RightSide = props => {
     return (
         <div
-            className="right-side"
+            className="right-sideo"
             ref={props.containerRef}
             onClick={props.onClick}
         >
-            <div className="inner-container">
-                <div className="text">{props.current}</div>
+            <div className="inner-containero">
+                <div className="texto">{props.current}</div>
             </div>
         </div>
     );

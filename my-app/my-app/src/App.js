@@ -1,6 +1,6 @@
 import './index.css';
 import './assets/css/style.css';
-import ForLogin from './forlogin';
+import ForLogin from './components/login/forlogin';
 import Header from './components/Header'
 
 // import Home from './components/Home';

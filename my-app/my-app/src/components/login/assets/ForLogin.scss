@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-.Appo{
+.Appo {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
+  margin-top: 200px;
 }
 
-.App-logo {
+.Appo-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
+.Appo-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -25,11 +26,11 @@
   color: white;
 }
 
-.App-link {
+.Appo-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes Appo-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -39,7 +40,7 @@
 }
 
 //Login Main Container
-.login {
+.logino {
   width: 27em;
   height: 40em;
   //min-height: 44em;
@@ -49,7 +50,8 @@
   margin-top: 5px;
   position: relative;
   z-index: 99;
-  .container {
+
+  .containero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +66,8 @@
     padding: 17px 10px;
     //transition: transform 200ms ease-in-out;
   }
-  .right-side {
+
+  .right-sideo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,19 +85,22 @@
     &.right {
       right: -40%;
       align-items: flex-end;
+
       &:hover {
         right: -45%;
       }
     }
+
     &.left {
       right: 40%;
       align-items: flex-start;
+
       &:hover {
         right: 45%;
       }
     }
 
-    .text {
+    .texto {
       font-size: 21px;
       font-weight: 500;
       color: #fff;
@@ -104,8 +110,7 @@
   }
 }
 
-//Button
-.btn {
+.btno {
   font-size: 21px;
   padding: 5px 20px;
   border: 0;
@@ -114,9 +119,12 @@
   border-radius: 3px;
   transition: all 250ms ease-in-out;
   cursor: pointer;
+  margin-bottom: 130px;
+
   &:hover {
     background-color: #2386c8;
   }
+
   &:focus {
     outline: none;
   }
