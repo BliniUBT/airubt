@@ -1,11 +1,24 @@
 import React from "react";
-import Banner from "./Banner";
+// import Home from './components/Home';
+import Footer from './Footer';
+// import Banner from './components/Banner';
+import Cards from './Cards';
+import ImageSlider from './ImageSlider';
+import { SliderData } from './SliderData';
 
 function Home() {
   return (
-    <div class="home">
-      <h1>Home </h1>
-      <Banner />
+    <div class="home">      
+      {/* Banner */}
+      <ImageSlider slides={SliderData} />
+      {/* Banner */}
+      {/* Cards */}
+
+      <Cards />
+
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
