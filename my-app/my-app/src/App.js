@@ -15,7 +15,7 @@ import Admin from './admin/components/Admin';
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>o
+            <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/login" component={Login}/>
