@@ -27,15 +27,19 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 <h2>Dashboard</h2>
                 <div className="sidebar_link">
                     <i>xxxx</i>
+                    <a href="#">Admins</a>
+                </div>
+                <div className="sidebar_link">
+                    <i>xxxx</i>
                     <Link to="/admin/Users">Users</Link>
                 </div>
                 <div className="sidebar_link">
                     <i>xxxx</i>
-                    <a href="#">Company Managment</a>
+                    <a href="#">Hosts</a>
                 </div>
                 <div className="sidebar_link">
                     <i>xxxx</i>
-                    <a href="#">Employee Managment</a>
+                    <a href="#">Cities</a>
                 </div>
                 {/* <div className="sidebar_link">
                     <i>xxxx</i>

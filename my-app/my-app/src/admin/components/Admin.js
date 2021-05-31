@@ -17,7 +17,6 @@ const Admin = () => {
 
     return (
         <div className="container">
-            <h1>React Dashboard</h1>
             <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
             
         </div>
