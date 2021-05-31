@@ -14,5 +14,5 @@ li{
        background-color: white;
        margin-top: 60px;
        height: 60px;
-       position: absolute;
+       position: inherit;
    }
