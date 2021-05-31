@@ -23,12 +23,12 @@ function App() {
         <div className="App">
             <BrowserRouter>
 
-                    <Route exact path="/" component={Header}/>
+                    <Route exact path="/login" component={Header}/>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/login" component={ForLogin}/>
                     <Route path="/admin" component={Admin}/>
                     <Route path="/admin/Users" component={Users}/>
-                    <Route exact path="/" component={Footer}/>
+                    <Route exact path="/login" component={Footer}/>
 
             </BrowserRouter>
         </div>
