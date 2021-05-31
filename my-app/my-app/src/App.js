@@ -17,12 +17,10 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Switch>
-                    {/*<Route path="*" component={Header}/>*/}
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/login" component={ForLogin}/>
-                    <Route path="/admin" component={Admin}/>
-                </Switch>
+                <Route path="/" component={Header}/>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/login" component={ForLogin}/>
+                <Route path="/admin" component={Admin}/>
             </BrowserRouter>
         </div>
     );
