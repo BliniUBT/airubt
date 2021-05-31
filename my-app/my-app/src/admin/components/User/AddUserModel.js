@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
+import '../../assets/css/addusermodel.css';
 
 export class AddUserModel extends Component{
     constructor(props){
@@ -41,7 +42,7 @@ export class AddUserModel extends Component{
                     <Modal.Body>
                         <Row>
                             <Col sm={6}>
-                                <Form onSubmit={this.handleSubmit}>
+                                <Form className='forma' onSubmit={this.handleSubmit}>
                                     {/* <Form.Group controlId='id'>
                                         <Form.Label>ID                            
                                         </Form.Label>
