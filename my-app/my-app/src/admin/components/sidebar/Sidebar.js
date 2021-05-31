@@ -1,7 +1,8 @@
 import '../../assets/css/sidebar.css';
-
-
 import React from 'react'
+import App from '../../../App'
+import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
+
 
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
     return (
@@ -26,7 +27,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 <h2>Dashboard</h2>
                 <div className="sidebar_link">
                     <i>xxxx</i>
-                    <a href="./Users">Users</a>
+                    <Link to="/admin/Users">Users</Link>
                 </div>
                 <div className="sidebar_link">
                     <i>xxxx</i>
@@ -36,7 +37,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                     <i>xxxx</i>
                     <a href="#">Employee Managment</a>
                 </div>
-                <div className="sidebar_link">
+                {/* <div className="sidebar_link">
                     <i>xxxx</i>
                     <a href="#">Appartments Managment</a>
                 </div>
@@ -60,7 +61,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 <div className="sidebar_link">
                     <i>xxxx</i>
                     <a href="#">Admin Managment</a>
-                </div>
+                </div> */}
                 <h2>Logout</h2>
                 <div className="sidebar_logout">
                     <i>xxxx</i>

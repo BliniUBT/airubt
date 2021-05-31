@@ -12,17 +12,19 @@ import {SliderData} from './components/SliderData';
 import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Admin from './admin/components/Admin';
+import Users from './admin/components/User/Users';
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Switch>
+                {/* <Switch> */}
                     {/*<Route path="*" component={Header}/>*/}
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/login" component={ForLogin}/>
                     <Route path="/admin" component={Admin}/>
-                </Switch>
+                    <Route path="/admin/Users" component={Users}/>
+                {/* </Switch> */}
             </BrowserRouter>
         </div>
     );

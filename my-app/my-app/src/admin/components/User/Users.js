@@ -47,10 +47,8 @@ export class Users extends Component{
 
         return(
             <div>
-                {/* <button className="mt-2">Add book</button> */}
-                {/* <Admin/> */}
                 <div className="users-container">
-                <Table className="user-table" striped bordered hover>
+                <table>
                     <thead>
                         <th>ID</th>
                         <th>Firstname</th>
@@ -70,8 +68,8 @@ export class Users extends Component{
                                 <td>{u.birthdate}</td>
                                 <td>{u.age}</td>
                                 <td>{u.phoneNumber}</td>
-                                <td>
-                                <ButtonToolbar>
+                                {/* <td> */}
+                                {/* <ButtonToolbar>
                                     <Button variant='primary' onClick={()=>this.setState({editModalShow:true, id:u.ID, userfname:u.Firstname, userlname:u.Lastname, useremail:u.Email, birthdate:u.BirthDate, userage:u.Age, userphonenumber:u.PhoneNumber})}>
                                     Edit User       
                                     </Button>
@@ -88,18 +86,18 @@ export class Users extends Component{
                                     birthdate={birthdate}
                                     userage={userage}
                                     userphonenumber={userphonenumber}/>
-                                </ButtonToolbar>
-                                </td>
+                                </ButtonToolbar> */}
+                                {/* </td> */}
                             </tr>)}
                     </tbody>
-                </Table>
-                <ButtonToolbar>
-                    <Button variant='primary' onClick={()=>this.setState({addModalShow:true})}>
-                     Add user       
-                    </Button>
-                    <AddUserModel show={this.state.addModalShow} onHide={addModalClose}/>
-                </ButtonToolbar>
+                </table>
                 </div>
+                {/* <ButtonToolbar> */}
+                <button variant='primary' id="add-btn" onClick={()=>this.setState({addModalShow:true})}>
+                     Add user       
+                    </button>
+                    <AddUserModel show={this.state.addModalShow} onHide={addModalClose}/>
+                {/* </ButtonToolbar> */}
             </div>
         )
     }

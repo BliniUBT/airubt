@@ -1,11 +1,30 @@
-/* .users-container{
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-z-index: 9999;
+.users-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9999;
+    height: 400px;
+    position: absolute;
+    margin-left: 40%;
 }
-td{
-    padding:0px;
-    background: red;
-} */
+thead >th{
+    border: 1px solid rgb(21, 125, 160);
+    border-radius: 5px;
+    background: rgb(21, 125, 160);
+    padding: 7px;
+}
+tbody >tr>td{
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    background: lightblue;
+    padding: 7px;
+}
+#add-btn{
+    border: 1px solid black;
+    border-radius: 5px;
+    background: lightgray;
+    float: right;
+    font-size: 15px;
+    margin: 20px;
+}
