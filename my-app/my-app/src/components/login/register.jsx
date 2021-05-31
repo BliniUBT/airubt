@@ -23,7 +23,7 @@ export class Register extends React.Component {
                             <label htmlFor="lastname">Last Name</label>
                             <input type="text" name="lastname" placeholder="Last Name"/>
                         </div>
-                    </div>
+
                     <div className="formo-group">
                         <label htmlFor="email">E-Mail</label>
                         <input type="text" name="email" placeholder="E-Mail"/>
@@ -36,6 +36,7 @@ export class Register extends React.Component {
                         <label htmlFor="cfpassword">Password</label>
                         <input type="password" name="cfpassword" placeholder="Confirm Password"/>
                     </div>
+                </div>
                 </div>
                 <div className="footero">
                     <button type="button" className="btno">
