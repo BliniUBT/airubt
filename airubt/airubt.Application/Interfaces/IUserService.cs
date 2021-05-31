@@ -13,5 +13,6 @@ namespace airubt.Application.Interfaces
         Task<IEnumerable> UsersList();
         void CreateUser(User user);
         void UpdateUser(User user);
+        void DeleteUser(int id);
     }
 }

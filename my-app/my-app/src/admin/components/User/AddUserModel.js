@@ -36,13 +36,13 @@ export class AddUserModel extends Component{
         return (
             <div className='container'>
                 <Modal {...this.props} size='lg' aria-labelledby='contained-modal-title-vcenter' centered>
-                    <Modal.Header closeButton>
+                    <Modal.Header>
                         <Modal.Title id='contained-modal-title-vcenter'>Add User</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Row>
                             <Col sm={6}>
-                                <Form className='forma' onSubmit={this.handleSubmit}>
+                                <Form onSubmit={this.handleSubmit}>
                                     {/* <Form.Group controlId='id'>
                                         <Form.Label>ID                            
                                         </Form.Label>
@@ -68,25 +68,25 @@ export class AddUserModel extends Component{
                                     </Form.Group>
 
                                     <Form.Group controlId='password'>
-                                        <Form.Label>Email                            
+                                        <Form.Label>Password                            
                                         </Form.Label>
                                         <Form.Control type='text' name='password' required placeholder='Enter password'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group controlId='birthDate'>
-                                        <Form.Label>Age                            
+                                        <Form.Label>BirthDate                           
                                         </Form.Label>
                                         <Form.Control type='date' name='birthDate' required placeholder='Enter Date'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group controlId='phonenumber'>
-                                        <Form.Label>Firstname                            
+                                        <Form.Label>Phone Number                           
                                         </Form.Label>
                                         <Form.Control type='text' name='phonenumber' required placeholder='Enter PhoneNumber'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group controlId='firstname'>
-                                        <Button variant='primary' type='submit'>Add User</Button>
+                                        <Button variant='primary' type='submit' onClick={this.props.onHide}>Add User</Button>
                                     </Form.Group>
                                 </Form>
                             </Col>

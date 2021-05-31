@@ -30,7 +30,7 @@ export class Users extends Component{
 
     deleteUser(id){
         if(window.confirm('Are you sure?')){
-            fetch('https://localhost:39990/api/user/'+id,{
+            fetch('https://localhost:39990/api/user/deleteuser',{
                 method:'DELETE',
                 header:{
                     'Accept':'application/json',
@@ -47,8 +47,14 @@ export class Users extends Component{
 
         return(
             <div>
+                <ButtonToolbar>
+                <Button variant='primary' id="add-btn" onClick={()=>this.setState({addModalShow:true})}>
+                     Add user       
+                    </Button>
+                    <AddUserModel show={this.state.addModalShow} onHide={addModalClose}/>
+                </ButtonToolbar>
                 <div className="users-container">
-                <table>
+                <Table>
                     <thead>
                         <th>ID</th>
                         <th>Firstname</th>
@@ -65,16 +71,16 @@ export class Users extends Component{
                                 <td>{u.firstname}</td>
                                 <td>{u.lastname}</td>
                                 <td>{u.email}</td>
-                                <td>{u.birthdate}</td>
+                                <td>{u.birthDate}</td>
                                 <td>{u.age}</td>
                                 <td>{u.phoneNumber}</td>
-                                {/* <td> */}
-                                {/* <ButtonToolbar>
-                                    <Button variant='primary' onClick={()=>this.setState({editModalShow:true, id:u.ID, userfname:u.Firstname, userlname:u.Lastname, useremail:u.Email, birthdate:u.BirthDate, userage:u.Age, userphonenumber:u.PhoneNumber})}>
+                                 <td> 
+                                 <ButtonToolbar>
+                                    <Button variant='primary' onClick={()=>this.setState({editModalShow:true, id:u.id, userfname:u.firstname, userlname:u.lastname, useremail:u.email, birthdate:u.birthDate, userphonenumber:u.phoneNumber})}>
                                     Edit User       
                                     </Button>
 
-                                    <Button variant='danger' onClick={()=>this.deleteUser(u.ID)}>
+                                    <Button variant='danger' onClick={()=>this.deleteUser(u.id)}>
                                     Delete User      
                                     </Button>
 
@@ -84,20 +90,13 @@ export class Users extends Component{
                                     userlname={userlname}
                                     useremail={useremail}
                                     birthdate={birthdate}
-                                    userage={userage}
                                     userphonenumber={userphonenumber}/>
-                                </ButtonToolbar> */}
-                                {/* </td> */}
+                                </ButtonToolbar> 
+                                 </td> 
                             </tr>)}
                     </tbody>
-                </table>
+                </Table>
                 </div>
-                {/* <ButtonToolbar> */}
-                <button variant='primary' id="add-btn" onClick={()=>this.setState({addModalShow:true})}>
-                     Add user       
-                    </button>
-                    <AddUserModel show={this.state.addModalShow} onHide={addModalClose}/>
-                {/* </ButtonToolbar> */}
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
+import '../../assets/css/editusermodel.css'
 
 export class EditUserModel extends Component{
     constructor(props){
@@ -9,19 +10,18 @@ export class EditUserModel extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        fetch('https://localhost:44341/api/user',{
+        fetch('https://localhost:39990/api/user/updateUser',{
             method:'PUT',
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                "id": event.target.id.value,
                 "firstname": event.target.firstname.value,
                 "lastname": event.target.lastname.value,
                 "email": event.target.email.value,
-                "age": event.target.age.value,
-                "phone": event.target.phone.value
+                "birthDate": event.target.birthDate.value,
+                "phoneNumber": event.target.phonenumber.value
             })
         })
         .then(res=>res.json())
@@ -38,7 +38,7 @@ export class EditUserModel extends Component{
         return (
             <div className='container'>
                 <Modal {...this.props} size='lg' aria-labelledby='contained-modal-title-vcenter' centered>
-                    <Modal.Header closeButton>
+                    <Modal.Header>
                         <Modal.Title id='contained-modal-title-vcenter'>Edit User</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -69,16 +69,16 @@ export class EditUserModel extends Component{
                                         <Form.Control type='email' name='email' required defaultValue={this.props.useremail} placeholder='Enter Email'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='age'>
-                                        <Form.Label>Age                            
+                                    <Form.Group controlId='birthdate'>
+                                        <Form.Label>BirthDate                           
                                         </Form.Label>
-                                        <Form.Control type='number' name='age' required defaultValue={this.props.userage} placeholder='Enter Age'></Form.Control>
+                                        <Form.Control type='datetime-local' name='birthDate' required defaultValue={this.props.birthdate} placeholder='Enter Birthdate'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group controlId='phonenumber'>
                                         <Form.Label>Phone Number                            
                                         </Form.Label>
-                                        <Form.Control type='text' name='phonenumber' required defaultValue={this.props.userphonenumber} placeholder='Enter PhoneNumber'></Form.Control>
+                                        <Form.Control type='text' name='phoneNumber' required defaultValue={this.props.userphonenumber} placeholder='Enter PhoneNumber'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group>

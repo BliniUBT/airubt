@@ -14,6 +14,6 @@ namespace airubt.Domain.Interfaces
         Task<User> GetUserById(int id);
         void CreateUser(User user);
         void UpdateUser(User user);
-        Task DeleteUser(User user);
+        void DeleteUser(int id);
     }
 }

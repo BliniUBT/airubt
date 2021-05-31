@@ -23,9 +23,10 @@ namespace airubt.Infrastructure.Repositories
             _ctx.SaveChanges();
         }
 
-        public Task DeleteUser(User user)
+        public void DeleteUser(int id)
         {
-            throw new NotImplementedException();
+            _ctx.Remove(id);
+            _ctx.SaveChanges();
         }
 
         public Task<User> GetUserById(int id)

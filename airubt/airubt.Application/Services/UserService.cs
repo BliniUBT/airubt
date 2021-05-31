@@ -22,6 +22,11 @@ namespace airubt.Application.Services
             _userRepository.CreateUser(user);
         }
 
+        public void DeleteUser(int id)
+        {
+            _userRepository.DeleteUser(id);
+        }
+
         public void UpdateUser(User user)
         {
             _userRepository.UpdateUser(user);
