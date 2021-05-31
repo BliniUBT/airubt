@@ -24,19 +24,17 @@ export class Register extends React.Component {
                             <input type="text" name="lastname" placeholder="Last Name"/>
                         </div>
                     </div>
-                    <div className="formo">
-                        <div className="formo-group">
-                            <label htmlFor="email">E-Mail</label>
-                            <input type="text" name="email" placeholder="E-Mail"/>
-                        </div>
-                        <div className="formo-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" placeholder="password"/>
-                        </div>
-                        <div className="formo-group">
-                            <label htmlFor="cfpassword">Password</label>
-                            <input type="password" name="cfpassword" placeholder="Confirm Password"/>
-                        </div>
+                    <div className="formo-group">
+                        <label htmlFor="email">E-Mail</label>
+                        <input type="text" name="email" placeholder="E-Mail"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" placeholder="password"/>
+                    </div>
+                    <div className="formo-group">
+                        <label htmlFor="cfpassword">Password</label>
+                        <input type="password" name="cfpassword" placeholder="Confirm Password"/>
                     </div>
                 </div>
                 <div className="footero">
