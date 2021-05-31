@@ -22,10 +22,11 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Route path="/" component={Header}/>
-                <Route path="/" component={Footer}/>
+
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/login" component={ForLogin}/>
                 <Route path="/admin" component={Admin}/>
+                <Route path="/" component={Footer}/>
             </BrowserRouter>
         </div>
     );
