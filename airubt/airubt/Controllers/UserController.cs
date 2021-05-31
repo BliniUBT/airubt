@@ -33,7 +33,7 @@ namespace airubt.API.Controllers
         [HttpPut("updateUser")]
         public async Task<IActionResult> UpdateUser([FromBody] User user)
         {
-            _userService.UpdateUser(user);
+            _userService.CreateUser(user);
             return Ok();
         }
     }
