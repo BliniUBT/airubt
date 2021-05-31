@@ -7,7 +7,6 @@ li{
        display: flex;
        flex-direction: row;
        justify-content: space-evenly;
-       position: relative;
        bottom: 0;
        left: 0;
        right: 0;
@@ -15,4 +14,5 @@ li{
        background-color: white;
        margin-top: 60px;
        height: 60px;
+       position: absolute;
    }

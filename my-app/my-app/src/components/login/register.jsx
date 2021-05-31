@@ -11,9 +11,6 @@ export class Register extends React.Component {
             <div className="base-containero" ref={this.props.containerRef}>
                 <div className="headero">Register</div>
                 <div className="contento">
-                    <div className="imageo">
-                        <img src={loginImg}/>
-                    </div>
                     <div className="formo">
                         <div className="formo-group">
                             <label htmlFor="firstname">First Name</label>
