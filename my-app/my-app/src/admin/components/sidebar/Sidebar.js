@@ -2,6 +2,8 @@ import '../../assets/css/sidebar.css';
 import React from 'react'
 import App from '../../../App'
 import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
+import PeopleIcon from '@material-ui/icons/People';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
@@ -30,8 +32,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                     <a href="#">Admins</a>
                 </div>
                 <div className="sidebar_link">
-                    <i>xxxx</i>
-                    <Link to="/admin/Users">Users</Link>
+                <PeopleIcon/>
+                    <Link to="/admin/Users"> Users</Link>
                 </div>
                 <div className="sidebar_link">
                     <i>xxxx</i>
@@ -68,8 +70,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 </div> */}
                 <h2>Logout</h2>
                 <div className="sidebar_logout">
-                    <i>xxxx</i>
-                    <a href="#">Logout</a>
+                    <ExitToAppIcon/>
+                    <a href="#"> Logout</a>
                 </div>
             </div>            
         </div>

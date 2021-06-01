@@ -30,7 +30,7 @@ export class Users extends Component{
 
     deleteUser(id){
         if(window.confirm('Are you sure?')){
-            fetch('https://localhost:39990/api/user/deleteuser',{
+            fetch('http://localhost:39990/api/user/deleteUser/'+id,{
                 method:'DELETE',
                 header:{
                     'Accept':'application/json',

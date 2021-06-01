@@ -10,17 +10,26 @@ export class EditUserModel extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        fetch('https://localhost:39990/api/user/updateUser',{
+        console.log(event.target.id.value);
+        console.log(event.target.firstname.value);
+        console.log(event.target.lastname.value);
+        console.log(event.target.email.value);
+        console.log(event.target.birthDate.value);
+        console.log(event.target.phonenumber.value);
+
+        fetch('http://localhost:39990/api/user/updateUser',{
             method:'PUT',
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
+                "id": parseInt(event.target.id.value),
                 "firstname": event.target.firstname.value,
                 "lastname": event.target.lastname.value,
                 "email": event.target.email.value,
                 "birthDate": event.target.birthDate.value,
+                "password":"123333333123123",
                 "phoneNumber": event.target.phonenumber.value
             })
         })
@@ -78,7 +87,7 @@ export class EditUserModel extends Component{
                                     <Form.Group controlId='phonenumber'>
                                         <Form.Label>Phone Number                            
                                         </Form.Label>
-                                        <Form.Control type='text' name='phoneNumber' required defaultValue={this.props.userphonenumber} placeholder='Enter PhoneNumber'></Form.Control>
+                                        <Form.Control type='text' name='phonenumber' required defaultValue={this.props.userphonenumber} placeholder='Enter PhoneNumber'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group>

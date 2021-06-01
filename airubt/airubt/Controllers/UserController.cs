@@ -37,8 +37,8 @@ namespace airubt.API.Controllers
             return Ok();
         }
 
-        [HttpDelete("deleteUser")]
-        public async Task<IActionResult> DeleteUser([FromBody] int id) {
+        [HttpDelete("deleteUser/{id}")]
+        public async Task<IActionResult> DeleteUser(int id) {
             _userService.DeleteUser(id);
             return Ok();
         }

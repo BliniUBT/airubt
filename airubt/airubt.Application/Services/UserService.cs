@@ -27,6 +27,11 @@ namespace airubt.Application.Services
             _userRepository.DeleteUser(id);
         }
 
+        public Task<User> GetUserById()
+        {
+            throw new NotImplementedException();
+        }
+
         public void UpdateUser(User user)
         {
             _userRepository.UpdateUser(user);

@@ -25,11 +25,12 @@ namespace airubt.Infrastructure.Repositories
 
         public void DeleteUser(int id)
         {
-            _ctx.Remove(id);
+            var deleteUser = _ctx.Users.FirstOrDefault(_ => _.Id == id);
+            _ctx.Users.Remove(deleteUser);
             _ctx.SaveChanges();
         }
 
-        public Task<User> GetUserById(int id)
+        public async Task<User> GetUserById(int id)
         {
             throw new NotImplementedException();
         }
