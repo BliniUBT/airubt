@@ -83,3 +83,20 @@ Create table Admin(
 )
 
 ---------------------------------------------------------------------------------------------------------------------
+
+Create table Activity(
+	ID int identity(1,1) primary key,
+	Name varchar(250) not null,
+	StartDate date not null,
+	EndDate date not null,
+	StartTime time not null,
+	EndTime time not null,
+	Price money,
+	City varchar(250) foreign key references City(Name),
+	Host int foreign key references Host(ID)
+)
+
+Alter table Activity add Timelength as DATEDIFF(MINUTE, StartTime , EndTime)
+
+---------------------------------------------------------------------------------------------------------------------
+
