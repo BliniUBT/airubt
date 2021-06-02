@@ -73,3 +73,13 @@ Create table Appointment(
 
 ---------------------------------------------------------------------------------------------------------------------
 
+Create table Admin(
+	ID int identity(1,1) primary key,
+	Firstname varchar(250) not null,
+	Lastname varchar(250) not null,
+	Email varchar(250) not null,
+	Password varchar(250) not null,
+	PhoneNumber varchar(100) not null
+)
+
+---------------------------------------------------------------------------------------------------------------------
