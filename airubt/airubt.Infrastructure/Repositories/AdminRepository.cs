@@ -14,7 +14,8 @@ namespace airubt.Infrastructure.Repositories
     public class AdminRepository : IAdminRepository
     {
         public readonly airubtContext _ctx;
-        public AdminRepository(airubtContext ctx) {
+        public AdminRepository(airubtContext ctx)
+        {
             _ctx = ctx;
         }
         public void CreateAdmin(Admin admin)

@@ -24,6 +24,8 @@ namespace airubt.Infrastructure.Context
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Host> Hosts { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
+     //   public object Admins { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
