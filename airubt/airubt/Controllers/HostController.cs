@@ -11,21 +11,21 @@ namespace airubt.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HostController : ControllerBase
+    public class AdminController : ControllerBase
     {
-        private IHostService _hostService;
+        private IAdminService _adminService;
 
-        public HostController(IHostService hostService)
+        public AdminController(IAdminService adminService)
         {
-            _hostService = hostService;
+            _adminService = adminService;
         }
 
-        [HttpGet("getHosts")]
-        public async Task<IActionResult> GetHosts() => Ok(await _hostService.HostsList());
-        [HttpPost("createHost")]
-        public async Task<IActionResult> CreateHost([FromBody] Host host)
+        [HttpGet("getAdmins")]
+        public async Task<IActionResult> GetAdmins() => Ok(await _adminService.AdminsList());
+        [HttpPost("createAdmin")]
+        public async Task<IActionResult> CreateAdmin([FromBody] Admin admin)
         {
-            _hostService.CreateHost(host);
+            _adminService.CreateAdmin(admin);
             return Ok();
         }
     }
