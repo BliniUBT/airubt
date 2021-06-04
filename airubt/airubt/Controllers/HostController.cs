@@ -11,21 +11,36 @@ namespace airubt.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AdminController : ControllerBase
+    public class HostController : ControllerBase
     {
-        private IAdminService _adminService;
+        private IHostService _hostService;
 
-        public AdminController(IAdminService adminService)
+        public HostController(IHostService hostService)
         {
-            _adminService = adminService;
+            _hostService = hostService;
         }
 
-        [HttpGet("getAdmins")]
-        public async Task<IActionResult> GetAdmins() => Ok(await _adminService.AdminsList());
-        [HttpPost("createAdmin")]
-        public async Task<IActionResult> CreateAdmin([FromBody] Admin admin)
+        [HttpGet("getHosts")]
+        public async Task<IActionResult> GetHosts() => Ok(await _hostService.HostsList());
+
+        [HttpPost("createHost")]
+        public async Task<IActionResult> CreateHost([FromBody] Host host)
         {
-            _adminService.CreateAdmin(admin);
+            _hostService.CreateHost(host);
+            return Ok();
+        }
+
+        [HttpPut("updateHost")]
+        public async Task<IActionResult> UpdateHost([FromBody] Host host)
+        {
+            _hostService.UpdateHost(host);
+            return Ok();
+        }
+
+        [HttpDelete("deleteHost/{id}")]
+        public async Task<IActionResult> DeleteHost(int id)
+        {
+            _hostService.DeleteHost(id);
             return Ok();
         }
     }

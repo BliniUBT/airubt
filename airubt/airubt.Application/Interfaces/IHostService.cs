@@ -12,5 +12,8 @@ namespace airubt.Application.Interfaces
     {
         Task<IEnumerable> HostsList();
         void CreateHost(Host host);
+        void UpdateHost(Host host);
+        void DeleteHost(int id);
+        Task<Host> GetHostById();
     }
 }

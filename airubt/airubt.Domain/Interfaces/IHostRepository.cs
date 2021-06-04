@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace airubt.Domain.Interfaces
         Task<IEnumerable> GetHosts();
         Task<Host> GetHostById(int id);
         void CreateHost(Host host);
-        Task UpdateHost(Host host);
-        Task<Host> DeleteHost(int id);
+        void UpdateHost(Host host);
+        void DeleteHost(int id);
     }
 }

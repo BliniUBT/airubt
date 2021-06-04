@@ -24,26 +24,27 @@ namespace airubt.Infrastructure.Repositories
             _ctx.SaveChanges();
         }
 
-
-
-        public Task<Host> DeleteHost(int id)
+        public void DeleteHost(int id)
         {
-            throw new NotImplementedException();
+            var deleteHost = _ctx.Hosts.FirstOrDefault(_ => _.Id == id);
+            _ctx.Hosts.Remove(deleteHost);
+            _ctx.SaveChanges();
         }
 
-        public Task<Host> GetHostById(int id)
+        public async Task<Host> GetHostById(int id)
         {
             throw new NotImplementedException();
         }
 
         public async Task<IEnumerable> GetHosts()
         {
-            return await _ctx.Hosts.ToListAsync();
+            return await _ctx.Users.ToListAsync();
         }
 
-        public Task UpdateHost(Host host)
+        public void UpdateHost(Host host)
         {
-            throw new NotImplementedException();
+            _ctx.Hosts.Update(host);
+            _ctx.SaveChanges();
         }
     }
 }
