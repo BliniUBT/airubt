@@ -10,13 +10,14 @@ import Footer from './components/Footer';
 // import Banner from './components/Banner';
 import Cards from './components/Cards';
 import ImageSlider from './components/ImageSlider';
-import {SliderData} from './components/SliderData';
+import { SliderData } from './components/SliderData';
 
 
-import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Admin from './admin/components/Admin';
 import Users from './admin/components/User/Users';
+import Admins from './admin/components/Admin/Admins';
 import Cities from './admin/components/City/Cities';
 
 
@@ -26,12 +27,13 @@ function App() {
         <div className="App">
             <BrowserRouter>
 
-                <Route exact path="/login" component={Header}/>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/login" component={ForLogin}/>
-                <Route path="/admin" component={Admin}/>
-                <Route path="/admin/Users" component={Users}/>
-                <Route path="/admin/Cities" component={Cities}/>
+                <Route exact path="/login" component={Header} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={ForLogin} />
+                <Route path="/admin" component={Admin} />
+                <Route path="/admin/Users" component={Users} />
+                <Route path="/admin/Admins" component={Admins} />
+                <Route path="/admin/Cities" component={Cities} />
                 {/* <Route exact path="/login" component={Footer}/> */}
 
             </BrowserRouter>
