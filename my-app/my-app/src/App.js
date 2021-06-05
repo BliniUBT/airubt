@@ -17,6 +17,9 @@ import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Admin from './admin/components/Admin';
 import Users from './admin/components/User/Users';
+import Cities from './admin/components/City/Cities';
+
+
 
 function App() {
     return (
@@ -28,6 +31,7 @@ function App() {
                 <Route exact path="/login" component={ForLogin}/>
                 <Route path="/admin" component={Admin}/>
                 <Route path="/admin/Users" component={Users}/>
+                <Route path="/admin/Cities" component={Cities}/>
                 {/* <Route exact path="/login" component={Footer}/> */}
 
             </BrowserRouter>
