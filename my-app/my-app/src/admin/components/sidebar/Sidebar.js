@@ -5,6 +5,7 @@ import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import PeopleIcon from '@material-ui/icons/People';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CityIcon from '@material-ui/icons/LocationCity';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 
 
@@ -30,7 +31,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 </div> */}
                 <h2>Dashboard</h2>
                 <div className="sidebar_link">
-                    <PeopleIcon />
+                    <AccountBoxIcon />
                     <Link to="/admin/Admins"> Admins</Link>
                 </div>
                 <div className="sidebar_link">
