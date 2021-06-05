@@ -11,7 +11,7 @@
     color: #212529;
 }
 thead >th{
-    border: 1px solid black;
+    border: 1px solid darkslategrey;
     border-radius: 0px;
     background: rgb(21, 125, 160);
     /* padding: 7px; */
