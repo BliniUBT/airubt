@@ -21,11 +21,26 @@ namespace airubt.API.Controllers
         }
 
         [HttpGet("getAdmins")]
-        public async Task<IActionResult> GetHosts() => Ok(await _adminService.AdminsList());
+        public async Task<IActionResult> GetAdmins() => Ok(await _adminService.AdminsList());
+
         [HttpPost("createAdmin")]
         public async Task<IActionResult> CreateAdmin([FromBody] Admin admin)
         {
             _adminService.CreateAdmin(admin);
+            return Ok();
+        }
+
+        [HttpPut("updateAdmin")]
+        public async Task<IActionResult> UpdateAdmin([FromBody] Admin admin)
+        {
+            _adminService.UpdateAdmin(admin);
+            return Ok();
+        }
+
+        [HttpDelete("deleteAdmin/{id}")]
+        public async Task<IActionResult> DeleteAdmin(int id)
+        {
+            _adminService.DeleteAdmin(id);
             return Ok();
         }
     }
