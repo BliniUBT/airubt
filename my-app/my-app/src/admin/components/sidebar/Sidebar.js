@@ -1,7 +1,7 @@
 import '../../assets/css/sidebar.css';
 import React from 'react'
 import App from '../../../App'
-import {Router, Link, BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import PeopleIcon from '@material-ui/icons/People';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CityIcon from '@material-ui/icons/LocationCity';
@@ -17,8 +17,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                     <h1></h1>
                 </div>
                 <i
-                id="sidebarIcon"
-                onClick={() => closeSidebar()}>
+                    id="sidebarIcon"
+                    onClick={() => closeSidebar()}>
 
                 </i>
             </div>
@@ -30,11 +30,11 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 </div> */}
                 <h2>Dashboard</h2>
                 <div className="sidebar_link">
-                    <i>xxxx</i>
-                    <a href="#">Admins</a>
+                    <PeopleIcon />
+                    <Link to="/admin/Admins"> Admins</Link>
                 </div>
                 <div className="sidebar_link">
-                <PeopleIcon/>
+                    <PeopleIcon />
                     <Link to="/admin/Users"> Users</Link>
                 </div>
                 <div className="sidebar_link">
@@ -42,7 +42,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                     <a href="#">Hosts</a>
                 </div>
                 <div className="sidebar_link">
-                <CityIcon/>
+                    <CityIcon />
                     <Link to="/admin/Cities"> Cities</Link>
                 </div>
                 {/* <div className="sidebar_link">
@@ -72,10 +72,10 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 </div> */}
                 <h2>Logout</h2>
                 <div className="sidebar_logout">
-                    <ExitToAppIcon/>
+                    <ExitToAppIcon />
                     <a href="#"> Logout</a>
                 </div>
-            </div>            
+            </div>
         </div>
     )
 }
