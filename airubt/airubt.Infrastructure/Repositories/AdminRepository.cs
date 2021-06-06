@@ -46,5 +46,15 @@ namespace airubt.Infrastructure.Repositories
             _ctx.Admins.Update(admin);
             _ctx.SaveChanges();
         }
+
+        Task<Admin> IAdminRepository.DeleteAdmin(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IAdminRepository.UpdateAdmin(Admin admin)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
