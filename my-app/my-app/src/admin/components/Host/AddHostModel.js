@@ -86,7 +86,7 @@ export class AddHostModel extends Component{
                                     </Form.Group>
 
                                     <Form.Group controlId='firstname'>
-                                        <Button variant='primary' type='submit' onClick={this.props.onHide}>Add User</Button>
+                                        <Button variant='primary' type='submit' onClick={this.props.onHide}>Add Host</Button>
                                     </Form.Group>
                                 </Form>
                             </Col>

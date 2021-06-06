@@ -91,7 +91,7 @@ export class EditHostModel extends Component{
                                     </Form.Group>
 
                                     <Form.Group>
-                                        <Button variant='primary' type='submit'>Update User</Button>
+                                        <Button variant='primary' type='submit'>Update Host</Button>
                                     </Form.Group>
                                 </Form>
                             </Col>

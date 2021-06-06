@@ -49,7 +49,7 @@ export class Hosts extends Component{
             <div>
                 <ButtonToolbar>
                 <Button variant='primary' id="add-btn" onClick={()=>this.setState({addModalShow:true})}>
-                     Add user       
+                     Add Host       
                     </Button>
                     <AddHostModel show={this.state.addModalShow} onHide={addModalClose}/>
                 </ButtonToolbar>
@@ -77,11 +77,11 @@ export class Hosts extends Component{
                                  <td> 
                                  <ButtonToolbar>
                                     <Button variant='primary' onClick={()=>this.setState({editModalShow:true, id:u.id, userfname:u.firstname, userlname:u.lastname, useremail:u.email, birthdate:u.birthDate, userphonenumber:u.phoneNumber})}>
-                                    Edit User       
+                                    Edit Host      
                                     </Button>
 
                                     <Button variant='danger' onClick={()=>this.deleteUser(u.id)}>
-                                    Delete User      
+                                    Delete Host      
                                     </Button>
 
                                     <EditHostModel show={this.state.editModalShow} onHide={editModalClose}

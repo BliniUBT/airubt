@@ -6,6 +6,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CityIcon from '@material-ui/icons/LocationCity';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import HostIcon from '@material-ui/icons/SupervisedUserCircle';
 
 
 
@@ -39,8 +40,8 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                     <Link to="/admin/Users"> Users</Link>
                 </div>
                 <div className="sidebar_link">
-                    <i>xxxx</i>
-                    <a href="#">Hosts</a>
+                    <HostIcon />
+                    <Link to="/admin/Hosts"> Hosts</Link>
                 </div>
                 <div className="sidebar_link">
                     <CityIcon />
