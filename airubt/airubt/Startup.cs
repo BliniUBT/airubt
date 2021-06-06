@@ -38,6 +38,8 @@ namespace airubt
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAdminService, AdminService>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<IHostService, HostService>();
             services.AddScoped<IHostRepository, HostRepository>();
             services.AddScoped<ICityService, CityService>();
