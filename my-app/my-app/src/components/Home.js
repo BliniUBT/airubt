@@ -5,6 +5,11 @@ import Footer from './Footer';
 import Cards from './Cards';
 import ImageSlider from './ImageSlider';
 import { SliderData } from './SliderData';
+import Activities from './Activities';
+import { render } from "@testing-library/react";
+
+
+
 
 function Home() {
   return (
@@ -16,6 +21,9 @@ function Home() {
 
       <Cards />
 
+    <div className =" activities">
+      <Activities/>
+    </div>
 
       {/* Footer */}
       <Footer />
