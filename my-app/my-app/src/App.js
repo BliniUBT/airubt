@@ -19,6 +19,7 @@ import Admin from './admin/components/Admin';
 import Users from './admin/components/User/Users';
 import Admins from './admin/components/Admin/Admins';
 import Cities from './admin/components/City/Cities';
+import Hosts from './admin/components/Host/Hosts';
 
 
 
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/admin/Users" component={Users} />
                 <Route path="/admin/Admins" component={Admins} />
                 <Route path="/admin/Cities" component={Cities} />
+                <Route path="/admin/Hosts" component={Hosts} />
                 {/* <Route exact path="/login" component={Footer}/> */}
 
             </BrowserRouter>
