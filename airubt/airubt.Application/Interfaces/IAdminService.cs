@@ -14,6 +14,6 @@ namespace airubt.Application.Interfaces
         void CreateAdmin(Admin admin);
         void UpdateAdmin(Admin admin);
         void DeleteAdmin(int id);
-        Task<User> GetAdminById();
+        Task<Admin> GetAdminById();
     }
 }
