@@ -16,10 +16,12 @@ import { SliderData } from './components/SliderData';
 import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Admin from './admin/components/Admin';
+import Account from './account/Account';
 import Users from './admin/components/User/Users';
 import Admins from './admin/components/Admin/Admins';
 import Cities from './admin/components/City/Cities';
 import Hosts from './admin/components/Host/Hosts';
+
 
 
 
@@ -32,6 +34,7 @@ function App() {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={ForLogin} />
                 <Route path="/admin" component={Admin} />
+                <Route path="/account" component={Account} />
                 <Route path="/admin/Users" component={Users} />
                 <Route path="/admin/Admins" component={Admins} />
                 <Route path="/admin/Cities" component={Cities} />
