@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace airubt.Domain.Interfaces
         Task<IEnumerable> GetAdmins();
         Task<Admin> GetAdminById(int id);
         void CreateAdmin(Admin admin);
-        Task UpdateAdmin(Admin admin);
-        Task<Admin> DeleteAdmin(int id);
+        void UpdateAdmin(Admin admin);
+        void DeleteAdmin(int id);
     }
 }
