@@ -41,10 +41,5 @@ namespace airubt.Application.Services
         {
             return await _adminRepository.GetAdmins();
         }
-
-        Task<User> IAdminService.GetAdminById()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
