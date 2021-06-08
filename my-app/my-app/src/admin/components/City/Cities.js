@@ -13,7 +13,7 @@ export class Cities extends Component{
     }
 
     refreshList(){
-        fetch('http://localhost:39990/api/city/getcities')
+        fetch('http://localhost:39990/api/city/getCities')
         .then(response=>response.json())
         .then(data=>{
             this.setState({city:data});
@@ -41,7 +41,7 @@ export class Cities extends Component{
     }
 
     render(){
-        const {city,name,zipcode,country} = this.state;
+        const {city, name, zipcode, country} = this.state;
         let addModalClose=()=>this.setState({addModalShow:false});
         let editModalClose=()=>this.setState({editModalShow:false});
 
@@ -62,19 +62,19 @@ export class Cities extends Component{
                         
                     </thead>
                     <tbody>
-                        {city.map(u=>
-                            <tr key={u.name}>
-                                <td>{u.name}</td>
-                                <td>{u.zipcode}</td>
-                                <td>{u.country}</td>
+                        {city.map(c=>
+                            <tr key={c.name}>
+                                <td>{c.name}</td>
+                                <td>{c.zipcode}</td>
+                                <td>{c.country}</td>
                                 
                                  <td> 
                                  <ButtonToolbar>
-                                    <Button variant='primary' onClick={()=>this.setState({editModalShow:true, name:u.name, zipcode:u.zipcode, country:u.country})}>
+                                    <Button variant='primary' onClick={()=>this.setState({editModalShow:true, name:c.name, zipcode:c.zipcode, country:c.country})}>
                                     Edit City  
                                     </Button>
 
-                                    <Button variant='danger' onClick={()=>this.deleteCity(u.name)}>
+                                    <Button variant='danger' onClick={()=>this.deleteCity(c.name)}>
                                     Delete City    
                                     </Button>
 

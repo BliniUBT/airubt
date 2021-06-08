@@ -9,14 +9,14 @@ export class Admins extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { admin: [], addModalShow: false, editModalShow: false };
+        this.state={ admin:[], addModalShow: false, editModalShow: false };
     }
 
     refreshList() {
-        fetch('http://localhost:39990/api/admin/getadmins')
+        fetch('http://localhost:39990/api/admin/getAdmins')
             .then(response => response.json())
             .then(data => {
-                this.setState({ admin: data });
+                this.setState({admin:data});
             });
     }
 
@@ -33,8 +33,8 @@ export class Admins extends Component {
             fetch('http://localhost:39990/api/admin/deleteAdmin/' + id, {
                 method: 'DELETE',
                 header: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
                 }
             })
         }
@@ -85,7 +85,7 @@ export class Admins extends Component {
                                                 adminfname={adminfname}
                                                 adminlname={adminlname}
                                                 adminemail={adminemail}
-                                                adminphonenumber={adminphonenumber} />
+                                                adminphonenumber={adminphonenumber}/>
                                         </ButtonToolbar>
                                     </td>
                                 </tr>)}

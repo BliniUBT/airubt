@@ -13,7 +13,7 @@ namespace airubt.Domain.Models
         }
 
         public string Name { get; set; }
-        public int ZipCode { get; set; }
+        public string ZipCode { get; set; }
         public string Country { get; set; }
 
         public virtual ICollection<Apartment> Apartments { get; set; }

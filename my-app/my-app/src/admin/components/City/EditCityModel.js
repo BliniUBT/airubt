@@ -23,7 +23,7 @@ export class EditCityModel extends Component{
             },
             body:JSON.stringify({
                 "name": event.target.name.value,
-                "zipcode": parseInt(event.target.zipcode.value),
+                "zipcode": event.target.zipcode.value,
                 "country": event.target.country.value,
                 
             })
@@ -58,7 +58,7 @@ export class EditCityModel extends Component{
                                     <Form.Group controlId='zipcode'>
                                         <Form.Label>ZipCode                           
                                         </Form.Label>
-                                        <Form.Control type='number' name='zipcode' required defaultValue={this.props.zipcode} placeholder='Enter ZIP Code'></Form.Control>
+                                        <Form.Control type='text' name='zipcode' required defaultValue={this.props.zipcode} placeholder='Enter ZIP Code'></Form.Control>
                                     </Form.Group>
 
                                     <Form.Group controlId='Country'>

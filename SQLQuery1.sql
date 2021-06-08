@@ -32,6 +32,8 @@ Create table City(
 	Country varchar(100) not null
 )
 Select * from City
+ALTER TABLE City
+ALTER COLUMN ZipCode varchar(255);
 ---------------------------------------------------------------------------------------------------------------------
 
 
