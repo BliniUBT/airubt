@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Button, ButtonToolbar } from 'react-bootstrap';
 import { AddAdminModel } from './AddAdminModel';
 import { EditAdminModel } from './EditAdminModel';
-//import Admin from '../Admin';
+import Admin from '../Admin';
 import '../../assets/css/admins.css'
 
 export class Admins extends Component {
