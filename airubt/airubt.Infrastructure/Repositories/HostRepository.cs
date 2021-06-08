@@ -38,7 +38,7 @@ namespace airubt.Infrastructure.Repositories
 
         public async Task<IEnumerable> GetHosts()
         {
-            return await _ctx.Users.ToListAsync();
+            return await _ctx.Hosts.ToListAsync();
         }
 
         public void UpdateHost(Host host)

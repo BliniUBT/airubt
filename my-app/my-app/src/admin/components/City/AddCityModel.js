@@ -56,7 +56,7 @@ export class AddCityModel extends Component{
                                     <Form.Group controlId='zipcode'>
                                         <Form.Label>ZipCode                          
                                         </Form.Label>
-                                        <Form.Control type='text' name='zipcode' required placeholder='Enter ZIP Code'></Form.Control>
+                                        <Form.Control type='number' name='zipcode' required placeholder='Enter ZIP Code'></Form.Control>
                                     </Form.Group>
 
 

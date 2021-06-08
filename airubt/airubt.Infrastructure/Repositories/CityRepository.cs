@@ -26,7 +26,7 @@ namespace airubt.Infrastructure.Repositories
 
         public void DeleteCity(string name)
         {
-            var deleteCity = _ctx.Cities.FirstOrDefault(_ => _.Name == name);
+            var deleteCity = _ctx.Cities.FirstOrDefault(_ => _.Name.Equals(name));
             _ctx.Cities.Remove(deleteCity);
             _ctx.SaveChanges();
         }
