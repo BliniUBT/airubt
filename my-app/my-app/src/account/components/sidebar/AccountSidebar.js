@@ -1,4 +1,4 @@
-import '../../assets/css/sidebar.css';
+import '../../assets/css/account.css';
 import React from 'react'
 import App from '../../../App'
 import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
