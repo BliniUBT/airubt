@@ -22,26 +22,14 @@ namespace airubt.Application.Services
             _hostRepository.CreateHost(host);
         }
 
-        public void DeleteHost(int id)
-        {
-            _hostRepository.DeleteHost(id);
-        }
-
-        public Task<Host> GetHostById()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateHost(Host host)
-        {
-            _hostRepository.UpdateHost(host);
-        }
-
         public async Task<IEnumerable> HostsList()
         {
             return await _hostRepository.GetHosts();
         }
-
+        public Task<Host> DeleteHost(int id)
+        {
+            return null;
+        }
 
 
     }
