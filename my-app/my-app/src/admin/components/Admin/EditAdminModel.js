@@ -10,12 +10,6 @@ export class EditAdminModel extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(event.target.id.value);
-        console.log(event.target.firstname.value);
-        console.log(event.target.lastname.value);
-        console.log(event.target.email.value);
-        console.log(event.target.birthDate.value);
-        console.log(event.target.phonenumber.value);
 
         fetch('http://localhost:39990/api/admin/updateAdmin', {
             method: 'PUT',
@@ -28,7 +22,6 @@ export class EditAdminModel extends Component {
                 "firstname": event.target.firstname.value,
                 "lastname": event.target.lastname.value,
                 "email": event.target.email.value,
-                "birthDate": event.target.birthDate.value,
                 "password": "123333333123123",
                 "phoneNumber": event.target.phonenumber.value
             })

@@ -1,11 +1,10 @@
 ﻿using System;
-using airubt.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace airubt.Infrastructure.Context
+namespace airubt.API.Models
 {
     public partial class airubtContext : DbContext
     {

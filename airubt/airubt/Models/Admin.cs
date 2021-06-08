@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace airubt.Domain.Models
+namespace airubt.API.Models
 {
     public partial class Admin
     {
