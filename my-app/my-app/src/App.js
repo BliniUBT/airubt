@@ -16,7 +16,7 @@ import { SliderData } from './components/SliderData';
 import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Admin from './admin/components/Admin';
-import Account from './account/Account';
+import Account from './components/UserAccountPage/Account';
 import Users from './admin/components/User/Users';
 import Admins from './admin/components/Admin/Admins';
 import Cities from './admin/components/City/Cities';

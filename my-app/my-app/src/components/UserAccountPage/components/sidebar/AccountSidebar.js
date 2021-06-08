@@ -1,6 +1,6 @@
 import '../../assets/css/account.css';
 import React from 'react'
-import App from '../../../App'
+// import App from '../App'
 import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountIcon from '@material-ui/icons/AccountCircleSharp';

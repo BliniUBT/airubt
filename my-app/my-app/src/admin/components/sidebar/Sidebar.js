@@ -75,7 +75,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                 <h2>Logout</h2>
                 <div className="sidebar_logout">
                     <ExitToAppIcon />
-                    <a href="#"> Logout</a>
+                    <a href="/"> Logout</a>
                 </div>
             </div>
         </div>
