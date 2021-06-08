@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react';
 /*import '../assets/css/admin.css'*/
-import Sidebar from './components/sidebar/Sidebar'
+import Sidebar from './components/sidebar/AccountSidebar'
 
 const Account = () => {
 
