@@ -1,4 +1,4 @@
-﻿using airubt.Application.Interfaces;
+﻿using airubt.API.Interfaces;
 using airubt.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

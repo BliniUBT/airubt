@@ -17,10 +17,11 @@ namespace airubt.Infrastructure.Repositories
         public UserRepository(airubtContext ctx) {
             _ctx = ctx;
         }
-        public void CreateUser(User user)
+        public async Task<User> CreateUser(User user)
         {
             _ctx.Users.AddAsync(user);
             _ctx.SaveChanges();
+            return user;
         }
 
         public void DeleteUser(int id)
@@ -32,7 +33,14 @@ namespace airubt.Infrastructure.Repositories
 
         public async Task<User> GetUserById(int id)
         {
-            throw new NotImplementedException();
+            var user = _ctx.Users.FirstOrDefault(_ => _.Id == id);
+            return user;
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            var user = _ctx.Users.FirstOrDefault(_ => _.Email == email);
+            return user;
         }
 
         public async Task<IEnumerable> GetUsers()
@@ -40,10 +48,11 @@ namespace airubt.Infrastructure.Repositories
             return await _ctx.Users.ToListAsync();
         }
 
-        public void UpdateUser(User user)
+        public async Task<User> UpdateUser(User user)
         {
             _ctx.Users.Update(user);
             _ctx.SaveChanges();
+            return user;
         }
     }
 }

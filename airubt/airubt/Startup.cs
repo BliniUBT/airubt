@@ -1,5 +1,6 @@
-using airubt.Application.Interfaces;
-using airubt.Application.Services;
+using airubt.API.Helpers;
+using airubt.API.Interfaces;
+using airubt.API.Services;
 using airubt.Domain.Interfaces;
 using airubt.Infrastructure.Context;
 using airubt.Infrastructure.Repositories;
@@ -44,6 +45,7 @@ namespace airubt
             services.AddScoped<IHostRepository, HostRepository>();
             services.AddScoped<ICityService, CityService>();
             services.AddScoped<ICityRepository, CityRepository>();
+            services.AddScoped<JwtService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +60,8 @@ namespace airubt
 
             app.UseAuthorization();
 
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(x => x.WithOrigins("http://localhost:3000")
+            .AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 
             app.UseEndpoints(endpoints =>
             {
