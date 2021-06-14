@@ -1,6 +1,5 @@
 import './index.css';
 import './assets/css/style.css';
-import ForLogin from './components/login/forlogin';
 
 // PARTIALS
 import Header from './components/Header';
@@ -21,6 +20,7 @@ import Users from './admin/components/User/Users';
 import Admins from './admin/components/Admin/Admins';
 import Cities from './admin/components/City/Cities';
 import Hosts from './admin/components/Host/Hosts';
+import Register from './components/Login/Register'
 
 
 
@@ -30,9 +30,8 @@ function App() {
         <div className="App">
             <BrowserRouter>
 
-                <Route exact path="/login" component={Header} />
+                <Route exact path="/login" component={Register} />
                 <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={ForLogin} />
                 <Route path="/admin" component={Admin} />
                 <Route path="/account" component={Account} />
                 <Route path="/admin/Users" component={Users} />
