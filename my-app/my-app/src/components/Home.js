@@ -11,7 +11,7 @@ import { render } from "@testing-library/react";
 
 
 
-function Home() {
+const Home = () => {
   return (
     <div class="home">      
       {/* Banner */}
