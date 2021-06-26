@@ -61,7 +61,7 @@ namespace airubt.API.Controllers
                 var token = _jwtService.Verify(jwt);
                 int userId = int.Parse(token.Issuer);
                 var user = _userService.GetUserById(userId);
-                return Ok(user);
+                return Ok(user.Result);
             }catch(Exception e)
             {
                 return Unauthorized();

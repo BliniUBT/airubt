@@ -6,8 +6,11 @@ import {BrowserRouter, Route,Link, Switch} from 'react-router-dom';
 
 // import Admin from "../admin/components/Admin"
 
-const Header = (props) => {
+const Header = ({name}) => {
+
+    
     const logout = async () => {
+        console.log(name);
         await fetch('http://localhost:39990/api/user/logout', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -18,7 +21,7 @@ const Header = (props) => {
 
     let menu;
 
-    if(props.name === ''){
+    if(name === '' || !name){
         menu = (
             <div className="header">
             <FlightIcon className="header__icon"/>
@@ -51,8 +54,8 @@ const Header = (props) => {
             </div>
 
             <div className="header__right">
-                <p>{props.name}</p>
-                <Link to="/login">
+                <p>{name}</p>
+                <Link to="/">
                     <button id="loginbutton" onClick={logout}>Logout</button>
                 </Link>
             </div>

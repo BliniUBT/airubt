@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Header from './Header'
 import '../assets/css/imageslider.css';
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, testing }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -34,7 +34,7 @@ const ImageSlider = ({ slides }) => {
                 {/* <input type="submit" id="banner-btn1"/> */}
                 
             </div>
-        <Header />
+        <Header name={testing} />
       <ArrowBackIosIcon className='left-arrow' onClick={prevSlide} />
       <ArrowForwardIosIcon className='right-arrow' onClick={nextSlide} />
       {SliderData.map((slide, index) => {
