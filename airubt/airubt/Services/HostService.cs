@@ -1,4 +1,5 @@
-﻿using airubt.API.Interfaces;
+﻿using airubt.API.Helpers;
+using airubt.API.Interfaces;
 using airubt.Domain.Interfaces;
 using airubt.Domain.Models;
 using System;
@@ -11,15 +12,37 @@ namespace airubt.API.Services
 {
     public class HostService : IHostService
     {
-        private IHostRepository _hostRepository;
-        public HostService(IHostRepository hostRepository)
+        private readonly IHostRepository _hostRepository;
+        private readonly JwtService _jwtService;
+        public HostService(IHostRepository hostRepository, JwtService jwtService)
         {
             _hostRepository = hostRepository;
+            _jwtService = jwtService;
         }
 
-        public void CreateHost(Host host)
+        public async Task<Host> CreateHost(Host host)
         {
-            _hostRepository.CreateHost(host);
+            return await _hostRepository.CreateHost(host);
+        }
+
+        public async Task<Host> Register(Host host
+            )
+        {
+            host.Password = BCrypt.Net.BCrypt.HashPassword(host.Password);
+            return await _hostRepository.CreateHost(host);
+        }
+
+        public async Task<Host> Login(Host host)
+        {
+            var holder = await _hostRepository.GetHostByEmail(host.Email);
+            if (holder != null)
+            {
+                if (BCrypt.Net.BCrypt.Verify(host.Password, holder.Password))
+                {
+                    return holder;
+                }
+            }
+            return null;
         }
 
         public void DeleteHost(int id)
@@ -27,14 +50,19 @@ namespace airubt.API.Services
             _hostRepository.DeleteHost(id);
         }
 
-        public Task<Host> GetHostById()
+        public async Task<Host> GetHostById(int id)
         {
-            throw new NotImplementedException();
+            return await _hostRepository.GetHostById(id);
         }
 
-        public void UpdateHost(Host host)
+        public async Task<Host> GetHostByEmail(string email)
         {
-            _hostRepository.UpdateHost(host);
+            return await _hostRepository.GetHostByEmail(email);
+        }
+
+        public async Task<Host> UpdateHost(Host host)
+        {
+            return await _hostRepository.UpdateHost(host);
         }
 
         public async Task<IEnumerable> HostsList()

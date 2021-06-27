@@ -18,10 +18,11 @@ namespace airubt.Infrastructure.Repositories
         {
             _ctx = ctx;
         }
-        public void CreateHost(Host host)
+        public async Task<Host> CreateHost(Host host)
         {
             _ctx.Hosts.AddAsync(host);
             _ctx.SaveChanges();
+            return host;
         }
 
         public void DeleteHost(int id)
@@ -33,7 +34,14 @@ namespace airubt.Infrastructure.Repositories
 
         public async Task<Host> GetHostById(int id)
         {
-            throw new NotImplementedException();
+            var host = _ctx.Hosts.FirstOrDefault(_ => _.Id == id);
+            return host;
+        }
+
+        public async Task<Host> GetHostByEmail(string email)
+        {
+            var host = _ctx.Hosts.FirstOrDefault(_ => _.Email == email);
+            return host;
         }
 
         public async Task<IEnumerable> GetHosts()
@@ -41,10 +49,11 @@ namespace airubt.Infrastructure.Repositories
             return await _ctx.Hosts.ToListAsync();
         }
 
-        public void UpdateHost(Host host)
+        public async Task<Host> UpdateHost(Host host)
         {
             _ctx.Hosts.Update(host);
             _ctx.SaveChanges();
+            return host;
         }
     }
 }

@@ -12,8 +12,9 @@ namespace airubt.Domain.Interfaces
     {
         Task<IEnumerable> GetHosts();
         Task<Host> GetHostById(int id);
-        void CreateHost(Host host);
-        void UpdateHost(Host host);
+        Task<Host> CreateHost(Host host);
+        Task<Host> UpdateHost(Host host);
+        Task<Host> GetHostByEmail(string email);
         void DeleteHost(int id);
     }
 }
