@@ -3,7 +3,7 @@ import {useState} from 'react';
 /*import '../assets/css/admin.css'*/
 import Sidebar from './components/sidebar/AccountSidebar'
 
-const Account = () => {
+const HostAccount = () => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -23,4 +23,4 @@ const Account = () => {
     )
 }
 
-export default Account
+export default HostAccount
