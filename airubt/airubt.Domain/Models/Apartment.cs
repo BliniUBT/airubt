@@ -15,15 +15,13 @@ namespace airubt.Domain.Models
         public int Id { get; set; }
         public string Address { get; set; }
         public int? Rooms { get; set; }
-        public double? Space { get; set; }
+        public int? Space { get; set; }
         public int? MaxGuests { get; set; }
         public int? Toilets { get; set; }
         public bool? Terrace { get; set; }
         public bool? Garden { get; set; }
         public bool? Garage { get; set; }
-        public TimeSpan? Checkin { get; set; }
-        public TimeSpan? Checkout { get; set; }
-        public double? Review { get; set; }
+        public int? Review { get; set; }
         public string Notes { get; set; }
         public int? HostId { get; set; }
         public string City { get; set; }

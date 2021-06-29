@@ -6,6 +6,7 @@ using airubt.Infrastructure.Context;
 using airubt.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,8 +36,10 @@ namespace airubt
             services.AddDbContext<airubtContext>(
                 options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
             services.AddCors();
-
-
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAdminService, AdminService>();
@@ -45,6 +48,8 @@ namespace airubt
             services.AddScoped<IHostRepository, HostRepository>();
             services.AddScoped<ICityService, CityService>();
             services.AddScoped<ICityRepository, CityRepository>();
+            services.AddScoped<IApartmentRepository, ApartmentRepository>();
+            services.AddScoped<IApartmentService, ApartmentService>();
             services.AddScoped<JwtService>();
         }
 

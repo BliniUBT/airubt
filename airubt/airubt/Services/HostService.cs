@@ -2,6 +2,7 @@
 using airubt.API.Interfaces;
 using airubt.Domain.Interfaces;
 using airubt.Domain.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace airubt.API.Services
     {
         private readonly IHostRepository _hostRepository;
         private readonly JwtService _jwtService;
-        public HostService(IHostRepository hostRepository, JwtService jwtService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public HostService(IHostRepository hostRepository, JwtService jwtService, IHttpContextAccessor httpContextAccessor)
         {
             _hostRepository = hostRepository;
             _jwtService = jwtService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<Host> CreateHost(Host host)
@@ -68,6 +71,22 @@ namespace airubt.API.Services
         public async Task<IEnumerable> HostsList()
         {
             return await _hostRepository.GetHosts();
+        }
+
+        public Task<Host> LoggedHost()
+        {
+            try
+            {
+                var jwt = _httpContextAccessor.HttpContext.Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+                int hostId = int.Parse(token.Issuer);
+                var host = GetHostById(hostId);
+                return host;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
     }
 }

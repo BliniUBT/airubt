@@ -32,7 +32,7 @@ namespace airubt.Infrastructure.Context
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=airubt;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=airubt;Integrated Security=True;");
             }
         }
 
@@ -46,9 +46,7 @@ namespace airubt.Infrastructure.Context
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.City)
-                    .HasMaxLength(250)
-                    .IsUnicode(false);
+                entity.Property(e => e.City).HasMaxLength(250);
 
                 entity.Property(e => e.EndDate).HasColumnType("date");
 
@@ -112,23 +110,15 @@ namespace airubt.Infrastructure.Context
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.Address)
-                    .HasMaxLength(200)
-                    .IsUnicode(false);
+                entity.Property(e => e.Address).HasMaxLength(200);
 
-                entity.Property(e => e.Category)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.Category).HasMaxLength(50);
 
-                entity.Property(e => e.City)
-                    .HasMaxLength(250)
-                    .IsUnicode(false);
+                entity.Property(e => e.City).HasMaxLength(250);
 
                 entity.Property(e => e.HostId).HasColumnName("HostID");
 
-                entity.Property(e => e.Notes)
-                    .HasMaxLength(500)
-                    .IsUnicode(false);
+                entity.Property(e => e.Notes).HasMaxLength(500);
 
                 entity.HasOne(d => d.CategoryNavigation)
                     .WithMany(p => p.Apartments)
@@ -154,13 +144,13 @@ namespace airubt.Infrastructure.Context
 
                 entity.Property(e => e.ApartmentId).HasColumnName("ApartmentID");
 
-                entity.Property(e => e.EndDate).HasColumnType("date");
+                entity.Property(e => e.Checkin).HasColumnType("datetime");
+
+                entity.Property(e => e.Checkout).HasColumnType("datetime");
 
                 entity.Property(e => e.Notes)
                     .HasMaxLength(250)
                     .IsUnicode(false);
-
-                entity.Property(e => e.StartDate).HasColumnType("date");
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
@@ -182,9 +172,7 @@ namespace airubt.Infrastructure.Context
 
                 entity.ToTable("Category");
 
-                entity.Property(e => e.Name)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.Name).HasMaxLength(50);
             });
 
             modelBuilder.Entity<City>(entity =>
@@ -194,9 +182,7 @@ namespace airubt.Infrastructure.Context
 
                 entity.ToTable("City");
 
-                entity.Property(e => e.Name)
-                    .HasMaxLength(250)
-                    .IsUnicode(false);
+                entity.Property(e => e.Name).HasMaxLength(250);
 
                 entity.Property(e => e.Country)
                     .IsRequired()

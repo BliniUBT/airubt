@@ -18,5 +18,6 @@ namespace airubt.API.Interfaces
         Task<Host> GetHostById(int id);
         Task<Host> GetHostByEmail(string email);
         Task<Host> Login(Host host);
+        Task<Host> LoggedHost();
     }
 }
