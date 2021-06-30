@@ -47,7 +47,7 @@ function App() {
                 <Route path="/admin/Admins" component={Admins} />
                 <Route path="/admin/Cities" component={Cities} />
                 <Route path="/admin/Hosts" component={Hosts} />
-                <Route path="/hostaccount/appartment" component={Appartment} />
+                <Route path="/hostaccount/appartments" component={Appartment} />
 
                 {/* <Route exact path="/login" component={Footer}/> */}
 

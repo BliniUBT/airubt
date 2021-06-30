@@ -9,14 +9,14 @@ export class Appartment extends Component{
 
     constructor(props){
         super(props);
-        this.state={appartment:[], addModalShow: false, editModalShow: false};
+        this.state={appartments:[], addModalShow: false, editModalShow: false};
     }
 
     refreshList(){
-        fetch('http://localhost:39990/api/user/getusers')
+        fetch('http://localhost:39990/api/host/getApartments')
         .then(response=>response.json())
         .then(data=>{
-            this.setState({appartment:data});
+            this.setState({appartments:data});
         });
     }
 

@@ -36,7 +36,6 @@ namespace airubt
             services.AddDbContext<airubtContext>(
                 options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
             services.AddCors();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
@@ -51,6 +50,8 @@ namespace airubt
             services.AddScoped<IApartmentRepository, ApartmentRepository>();
             services.AddScoped<IApartmentService, ApartmentService>();
             services.AddScoped<JwtService>();
+            services.AddMvc();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

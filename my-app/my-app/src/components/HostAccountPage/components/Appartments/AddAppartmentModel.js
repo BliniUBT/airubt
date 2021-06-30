@@ -10,19 +10,25 @@ export class AddAppartmentModel extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        fetch('http://localhost:39990/api/user/createUser',{
+        fetch('http://localhost:39990/api/host/createApartment',{
             method:'POST',
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                "firstname": event.target.firstname.value,
-                "lastname": event.target.lastname.value,
-                "email": event.target.email.value,
-                "password": event.target.password.value,
-                "birthDate": event.target.birthDate.value,
-                "phoneNumber": event.target.phonenumber.value
+                "address": event.target.address.value,
+                "rooms": event.target.rooms.value,
+                "space": event.target.space.value,
+                "maxGuests": event.target.maxGuests.value,
+                "toilets": event.target.toilets.value,
+                "terrace": event.target.terrace.value,
+                "garden": event.target.garden.value,
+                "review": event.target.review.value,
+                "notes": event.target.notes.value,
+                "city": event.target.city.value,
+                "category": event.target.category.value
+
             })
         })
         .then(res=>res.json())
@@ -37,7 +43,7 @@ export class AddAppartmentModel extends Component{
             <div className='container'>
                 <Modal {...this.props} size='lg' aria-labelledby='contained-modal-title-vcenter' centered>
                     <Modal.Header>
-                        <Modal.Title id='contained-modal-title-vcenter'>Add User</Modal.Title>
+                        <Modal.Title id='contained-modal-title-vcenter'>Add Apartment</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Row>
@@ -49,44 +55,74 @@ export class AddAppartmentModel extends Component{
                                         <Form.Control type='number' name='id' required placeholder='Enter ID' defaultValue></Form.Control>
                                     </Form.Group> */}
 
-                                    <Form.Group controlId='firstname'>
-                                        <Form.Label>Firstname                            
+                                    <Form.Group controlId='address'>
+                                        <Form.Label>Address                            
                                         </Form.Label>
-                                        <Form.Control type='text' name='firstname' required placeholder='Enter Firstname'></Form.Control>
+                                        <Form.Control type='text' name='address' required placeholder='Enter Address'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='lastname'>
-                                        <Form.Label>Lastname                            
+                                    <Form.Group controlId='rooms'>
+                                        <Form.Label>Rooms                            
                                         </Form.Label>
-                                        <Form.Control type='text' name='lastname' required placeholder='Enter Lastname'></Form.Control>
+                                        <Form.Control type='number' name='rooms' required placeholder='Enter Rooms'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='email'>
-                                        <Form.Label>Email                            
+                                    <Form.Group controlId='space'>
+                                        <Form.Label>Space                            
                                         </Form.Label>
-                                        <Form.Control type='email' name='email' required placeholder='Enter Email'></Form.Control>
+                                        <Form.Control type='number' name='space' required placeholder='Enter Space'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='password'>
-                                        <Form.Label>Password                            
+                                    <Form.Group controlId='maxGuests'>
+                                        <Form.Label>Max Guests                            
                                         </Form.Label>
-                                        <Form.Control type='text' name='password' required placeholder='Enter password'></Form.Control>
+                                        <Form.Control type='number' name='maxGuests' required placeholder='Enter Max Guests'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='birthDate'>
-                                        <Form.Label>BirthDate                           
+                                    <Form.Group controlId='toilets'>
+                                        <Form.Label>Toilets                           
                                         </Form.Label>
-                                        <Form.Control type='date' name='birthDate' required placeholder='Enter Date'></Form.Control>
+                                        <Form.Control type='number' name='toilets' required placeholder='Enter Toilets'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='phonenumber'>
-                                        <Form.Label>Phone Number                           
+                                    <Form.Group controlId='terrace'>
+                                        <Form.Label>Terrace                           
                                         </Form.Label>
-                                        <Form.Control type='text' name='phonenumber' required placeholder='Enter PhoneNumber'></Form.Control>
+                                        <Form.Control type='number' name='terrace' required placeholder='Enter Terrace'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='firstname'>
-                                        <Button variant='primary' type='submit' onClick={this.props.onHide}>Add User</Button>
+                                    <Form.Group controlId='garden'>
+                                        <Form.Label>Garden                            
+                                        </Form.Label>
+                                        <Form.Control type='number' name='garden' required placeholder='Enter Garden'></Form.Control>
+                                    </Form.Group>
+
+                                    <Form.Group controlId='review'>
+                                        <Form.Label>Review                           
+                                        </Form.Label>
+                                        <Form.Control type='number' name='review' required placeholder='Enter Review'></Form.Control>
+                                    </Form.Group>
+
+                                    <Form.Group controlId='notes'>
+                                        <Form.Label>Notes                           
+                                        </Form.Label>
+                                        <Form.Control type='text' name='notes' required placeholder='Enter Notes'></Form.Control>
+                                    </Form.Group>
+
+                                    <Form.Group controlId='city'>
+                                        <Form.Label>City                           
+                                        </Form.Label>
+                                        <Form.Control type='text' name='city' required placeholder='Enter City'></Form.Control>
+                                    </Form.Group>
+
+                                    <Form.Group controlId='category'>
+                                        <Form.Label>Category                           
+                                        </Form.Label>
+                                        <Form.Control type='text' name='category' required placeholder='Enter Category'></Form.Control>
+                                    </Form.Group>
+
+                                    <Form.Group controlId='address'>
+                                        <Button variant='primary' type='submit' onClick={this.props.onHide}>Add Apartment</Button>
                                     </Form.Group>
                                 </Form>
                             </Col>
