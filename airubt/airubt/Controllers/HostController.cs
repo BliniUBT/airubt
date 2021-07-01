@@ -32,12 +32,12 @@ namespace airubt.API.Controllers
         [HttpGet("getApartments")]
         public async Task<IActionResult> GetApartments()
         {
-            //var host = await _hostService.LoggedHost();
-            //if(host != null)
-            //{
-                return Ok(_apartmentService.ApartmentsList(7).Result);
-            //}
-            //return Unauthorized();
+            var host = await _hostService.LoggedHost();
+            if (host != null)
+            {
+                return Ok(await _apartmentService.ApartmentsList(host.Id));
+            }
+            return Unauthorized();
         }
 
         [HttpPost("createHost")]

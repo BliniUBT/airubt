@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react';
 /*import '../assets/css/admin.css'*/
-import Sidebar from './components/sidebar/AccountSidebar'
+import AccountSidebar from './components/sidebar/AccountSidebar'
 
 const HostAccount = () => {
 
@@ -17,7 +17,7 @@ const HostAccount = () => {
 
     return (
         <div className="container">
-            <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+            <AccountSidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
             
         </div>
     )

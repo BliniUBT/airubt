@@ -1,11 +1,29 @@
 import React, {Component} from 'react';
-import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
+import {Modal, Button, Row, Col, Form, DropdownButton,Dropdown} from 'react-bootstrap';
 // import '../../assets/css/addusermodel.css';
 
 export class AddAppartmentModel extends Component{
     constructor(props){
         super(props);
+        this.state={city:[], cityId:"",hasTerrace:false,hasGarden:false,hasGarage:false};
         this.handleSubmit=this.handleSubmit.bind(this);
+    }
+
+    handleSelect(e){
+        console.log(e);
+        this.setState({cityId:e});
+    }
+
+    citiesList(){
+        fetch('http://localhost:39990/api/city/getCities')
+        .then(response=>response.json())
+        .then(data=>{
+            this.setState({city:data});
+        });
+    }
+
+    componentDidMount(){
+        this.citiesList();
     }
 
     handleSubmit(event){
@@ -16,18 +34,20 @@ export class AddAppartmentModel extends Component{
                 'Accept':'application/json',
                 'Content-Type':'application/json'
             },
+            credentials: 'include',
             body:JSON.stringify({
                 "address": event.target.address.value,
                 "rooms": event.target.rooms.value,
                 "space": event.target.space.value,
                 "maxGuests": event.target.maxGuests.value,
                 "toilets": event.target.toilets.value,
-                "terrace": event.target.terrace.value,
-                "garden": event.target.garden.value,
+                "terrace": this.state.hasTerrace,
+                "garden": this.state.hasGarden,
+                "garage": this.state.hasGarage,
                 "review": event.target.review.value,
                 "notes": event.target.notes.value,
-                "city": event.target.city.value,
-                "category": event.target.category.value
+                "city": this.state.cityId,
+                "category": "Apartment"
 
             })
         })
@@ -39,6 +59,7 @@ export class AddAppartmentModel extends Component{
     }
 
     render(){
+        const {city} = this.state;
         return (
             <div className='container'>
                 <Modal {...this.props} size='lg' aria-labelledby='contained-modal-title-vcenter' centered>
@@ -86,15 +107,15 @@ export class AddAppartmentModel extends Component{
                                     </Form.Group>
 
                                     <Form.Group controlId='terrace'>
-                                        <Form.Label>Terrace                           
-                                        </Form.Label>
-                                        <Form.Control type='number' name='terrace' required placeholder='Enter Terrace'></Form.Control>
+                                        <Form.Check type="checkbox" name='terrace' onChange={()=>this.setState({hasTerrace: !this.state.hasTerrace})} label=" Has terrace?" />
                                     </Form.Group>
 
                                     <Form.Group controlId='garden'>
-                                        <Form.Label>Garden                            
-                                        </Form.Label>
-                                        <Form.Control type='number' name='garden' required placeholder='Enter Garden'></Form.Control>
+                                        <Form.Check type="checkbox" name='garden' onChange={()=>this.setState({hasGarden: !this.state.hasGarden})} label=" Has garden?" />
+                                    </Form.Group>
+
+                                    <Form.Group controlId='garage'>
+                                        <Form.Check type="checkbox" name='garage' onChange={()=>this.setState({hasGarage: !this.state.hasGarage})} label=" Has garage?" />
                                     </Form.Group>
 
                                     <Form.Group controlId='review'>
@@ -109,11 +130,15 @@ export class AddAppartmentModel extends Component{
                                         <Form.Control type='text' name='notes' required placeholder='Enter Notes'></Form.Control>
                                     </Form.Group>
 
-                                    <Form.Group controlId='city'>
-                                        <Form.Label>City                           
-                                        </Form.Label>
-                                        <Form.Control type='text' name='city' required placeholder='Enter City'></Form.Control>
-                                    </Form.Group>
+                                    <DropdownButton 
+                                        title="Select city"
+                                        >
+                                    {city.map(c=>(
+                                        <Dropdown.Item name="city" title={c.name} onClick={()=>this.setState({cityId:c.name})}>{c.name}</Dropdown.Item>
+                                    ))}
+                                    </DropdownButton>
+
+                                    
 
                                     <Form.Group controlId='category'>
                                         <Form.Label>Category                           

@@ -1,13 +1,13 @@
 import '../../assets/css/account.css';
 import React from 'react'
-// import App from '../App'
+import App from '../../../../App'
 import { Router, Link, BrowserRouter, Route, Switch } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountIcon from '@material-ui/icons/AccountCircleSharp';
 
 
 
-const Sidebar = ({ sidebarOpen, closeSidebar }) => {
+const AccountSidebar = ({ sidebarOpen, closeSidebar }) => {
     return (
         <div className={sidebarOpen ? "sidebar-responsive" : ""} id="sidebar">
             <div className="sidebar_title">
@@ -47,4 +47,4 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
     )
 }
 
-export default Sidebar;
+export default AccountSidebar;
