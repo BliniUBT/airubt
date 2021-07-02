@@ -74,6 +74,18 @@ namespace airubt.API.Controllers
             return BadRequest();
         }
 
+        [HttpDelete("deleteApartment/{id}")]
+        public async Task<IActionResult> DeleteApartment(int id)
+        {
+            var host = await _hostService.LoggedHost();
+            if (host != null)
+            {
+                 _apartmentService.DeleteApartment(id);
+                return Ok();
+            }
+            return BadRequest();
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Host host)
         {

@@ -34,7 +34,22 @@ export class EditAppartmentModel extends Component{
         // console.log(event.target.email.value);
         // console.log(event.target.birthDate.value);
         // console.log(event.target.phonenumber.value);
-
+        var test = {
+            "id": parseInt(event.target.id.value),
+                "address": event.target.address.value,
+                "rooms": event.target.rooms.value,
+                "space": event.target.space.value,
+                "maxGuests": event.target.maxGuests.value,
+                "toilets": event.target.toilets.value,
+                "terrace": this.state.hasTerrace,
+                "garden": this.state.hasGarden,
+                "garage": this.state.hasGarage,
+                "review": event.target.review.value,
+                "notes": event.target.notes.value,
+                "city": this.state.cityId,
+                "category": "Apartment"
+        }
+        console.log(test);
         fetch('http://localhost:39990/api/host/updateApartment',{
             method:'PUT',
             headers:{
@@ -58,13 +73,7 @@ export class EditAppartmentModel extends Component{
                 "category": "Apartment"
             })
         })
-        .then(res=>res.json())
-        .then((result)=>{
-            alert(result);
-        },
-        (error)=>{
-            alert('Failed');
-        })
+        .then(res=>res.json());
 
     }
 
@@ -161,7 +170,7 @@ export class EditAppartmentModel extends Component{
                                     </Form.Group>
 
                                     <Form.Group>
-                                        <Button variant='primary' type='submit'>Update Apartment</Button>
+                                        <Button variant='primary' type='submit' onClick={this.props.onHide}>Update Apartment</Button>
                                     </Form.Group>
                                 </Form>
                             </Col>

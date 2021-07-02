@@ -2,7 +2,7 @@
     text-align: center;
     height: auto;
     width: auto;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-top: 2%;
 }
 .table{
@@ -24,11 +24,6 @@ tbody >tr>td{
 }
 #add-btn{
     position: relative;
-    /* border: 1px solid black;
-    border-radius: 5px;
-    background: lightgray;
-    float: right;
-    font-size: 15px; */
-    left: 93%;
-    top: 10px;
+    left: 87%;
+    top: 87px;
 }

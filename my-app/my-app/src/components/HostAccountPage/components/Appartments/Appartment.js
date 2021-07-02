@@ -32,17 +32,18 @@ export class Appartment extends Component{
         this.refreshList();
     }
 
-    // deleteUser(id){
-    //     if(window.confirm('Are you sure?')){
-    //         fetch('http://localhost:39990/api/user/deleteUser/'+id,{
-    //             method:'DELETE',
-    //             header:{
-    //                 'Accept':'application/json',
-    //                 'Content-Type':'application/json'
-    //             }
-    //         })
-    //     }
-    // }
+    deleteUser(id){
+        if(window.confirm('Are you sure?')){
+            fetch('http://localhost:39990/api/host/deleteApartment/'+id,{
+                method:'DELETE',
+                header:{
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
+                },
+                credentials: 'include'
+            })
+        }
+    }
 
     render(){
         const {apartment, id, appAddress, appRooms, appSpace, appMaxGuests, appToilets, appTerrace, appGarden, appGarage, appReview, appNotes, appCity, appCategory} = this.state;
@@ -98,9 +99,9 @@ export class Appartment extends Component{
                                     Edit Appartment       
                                     </Button>
 
-                                    {/* <Button variant='danger' onClick={()=>this.deleteUser(app.id)}>
+                                    <Button variant='danger' onClick={()=>this.deleteUser(app.id)}>
                                     Delete Appartment      
-                                    </Button> */}
+                                    </Button>
 
                                     <EditAppartmentModel show={this.state.editModalShow} onHide={editModalClose}
                                     id={id}
