@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/css/cards.css';
+import ApartmentCard from './Apartments/ApartmentCard'
 
 
 function Cards(){
+
+    const[apartments, setApartments] = useState([]);
+
+    useEffect(() =>{
+        (
+            async () => {
+                const response = await fetch('http://localhost:39990/api/apartment/getApartments', {
+                    method: 'GET',
+                    headers: {'Content-Type':'application/json'},
+                    credentials: 'include'
+                });
+
+                const content = await response.json();
+                
+                setApartments(content);
+            }
+        )();
+
+    });
+
     return(
         <div className='cards'>
             <div className='cards-info'>
@@ -14,23 +35,19 @@ function Cards(){
                 </p>
             </div>
             <div className='card-container'>
-                <h1>Start by picking your perfect setting</h1>
-                <div className='card1-2-cont'>
-                <div className='card-1'>
-                    <h3>Beach</h3>
-                </div>
-                <div className='card-2'>
-                <h3>Mountains</h3>
-
-                </div>
-                </div>
-                <div className='card-3'>
-                    <h2>Become a Host</h2>
-                    <h4>Make passive income by sharing 
-                        your space.
-                    </h4>
-                    <button>Learn More</button>
-                </div>
+            <div className="row e-shop">
+                <div className="col-12">
+                    <h2 className="mb-4 mt-4 apartment-title">Apartments</h2>
+                        <div className="row">
+                            {apartments && apartments.map((apartment, i) => (
+                                <div key={i} className="col-4 mb-3">
+                                    <ApartmentCard apartment={apartment}/>
+                                </div>
+                            ))}
+                        </div>
+                        <hr />
+                </div> 
+            </div>
             </div>
         </div>
         

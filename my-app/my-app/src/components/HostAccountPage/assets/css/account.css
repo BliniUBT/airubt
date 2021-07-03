@@ -9,7 +9,17 @@
     height: 100%;
     left: 0px;
 }
-
+#logoutbutton{
+    color: #e65061;
+    padding-right: 25px;
+    border-style: none;
+    background-color: transparent;
+    border: 1px solid #e65061;
+    border-radius: 20px;
+    padding: 7px;
+    width: 100px;
+    cursor: pointer;
+}
 .sidebar_title{
     display: flex;
     justify-content: space-between;

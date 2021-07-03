@@ -16,6 +16,20 @@
     margin-right: -200px;
     
   }
+
+  .user-name{    
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    border-radius: 15px;
+    /* width: 50px; */
+    /* height: 37px; */
+    padding-left: 10px;
+    margin-top: 15px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
   
   .header__center {
     margin-top: 10px;

@@ -54,7 +54,7 @@ const Header = ({name}) => {
             </div>
 
             <div className="header__right">
-                <p>{name}</p>
+                <p className="user-name">Welcome, {name}</p>
                 <Link to="/">
                     <button id="loginbutton" onClick={logout}>Logout</button>
                 </Link>

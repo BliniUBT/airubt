@@ -43,8 +43,13 @@ const Login = () => {
    
 
     if(redirect){
-        return <Redirect to="/"/>
+        if(userActive)
+            return <Redirect to="/"/>
+        else
+            return <Redirect to="/hostaccount" />
     }
+
+    
 
     return(
         <div className="login-container">

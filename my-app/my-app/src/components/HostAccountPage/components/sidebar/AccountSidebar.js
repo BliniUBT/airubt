@@ -8,6 +8,16 @@ import AccountIcon from '@material-ui/icons/AccountCircleSharp';
 
 
 const AccountSidebar = ({ sidebarOpen, closeSidebar }) => {
+
+    const logout = async () => {
+        await fetch('http://localhost:39990/api/user/logout', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            credentials: 'include',
+        });
+
+    }
+
     return (
         <div className={sidebarOpen ? "sidebar-responsive" : ""} id="sidebar">
             <div className="sidebar_title">
@@ -39,8 +49,9 @@ const AccountSidebar = ({ sidebarOpen, closeSidebar }) => {
                 </div> } */}
                
                 <div className="sidebar_logout">
-                    <ExitToAppIcon />
-                    <a href="\"> Logout</a>
+                    <Link to="/">
+                        <button id="logoutbutton" onClick={logout}>Logout</button>
+                    </Link>
                 </div>
             </div>
         </div>
