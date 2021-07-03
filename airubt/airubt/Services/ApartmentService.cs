@@ -21,6 +21,12 @@ namespace airubt.API.Services
             return await _apartmentRepository.GetApartments(id);
         }
 
+        public async Task<IEnumerable> ApartmentsList()
+        {
+            return await _apartmentRepository.GetApartments();
+
+        }
+
         public async Task<Apartment> CreateApartment(Apartment _)
         {
             return await _apartmentRepository.CreateApartment(_);

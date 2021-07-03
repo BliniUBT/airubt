@@ -45,6 +45,12 @@ namespace airubt.Infrastructure.Repositories
             return apps;
         }
 
+        public async Task<IEnumerable> GetApartments()
+        {
+            var apps = await _ctx.Apartments.ToListAsync();
+            return apps;
+        }
+
         public async Task<Apartment> UpdateApartment(Apartment _)
         {
             _ctx.Apartments.Update(_);

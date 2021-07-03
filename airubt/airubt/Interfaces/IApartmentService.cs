@@ -10,9 +10,14 @@ namespace airubt.API.Interfaces
     public interface IApartmentService
     {
         Task<IEnumerable> ApartmentsList(int id);
+        Task<IEnumerable> ApartmentsList();
+
         Task<Apartment> CreateApartment(Apartment _);
         Task<Apartment> UpdateApartment(Apartment _);
         void DeleteApartment(int id);
         Task<Apartment> GetApartmentById(int id);
+
+
+
     }
 }
