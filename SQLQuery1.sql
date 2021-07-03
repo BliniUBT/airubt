@@ -38,24 +38,22 @@ ALTER COLUMN ZipCode varchar(255);
 
 
 Create table Category(
-	Name varchar(50) primary key
+	Name nvarchar(50) primary key
 )
 ---------------------------------------------------------------------------------------------------------------------
 
 Create table Apartment(
 	ID int IDENTITY(1,1) primary key,
-	Address varchar(200),
+	Address nvarchar(200),
 	Rooms int,
-	Space float,
+	Space int,
 	MaxGuests int,
 	Toilets int,
 	Terrace bit,
 	Garden bit,
 	Garage bit,
-	Checkin time,
-	Checkout time,
-	Review float,
-	Notes varchar(500),
+	Review int,
+	Notes nvarchar(500),
 	HostID int foreign key references Host(ID)
 )
 Alter table Apartment add City varchar(250) foreign key references City(Name)
@@ -66,8 +64,8 @@ Alter table Apartment add Category varchar(50) foreign key references Category(N
 Create table Appointment(
 	ID int identity(1,1) primary key,
 	Guests int,
-	StartDate date,
-	EndDate date,
+	Checkin datetime,
+	Checkout datetime,
 	Notes varchar(250),
 	UserID int foreign key references [User](ID),
 	ApartmentID int foreign key references Apartment(ID)
