@@ -25,6 +25,7 @@ import Hosts from './admin/components/Host/Hosts';
 import Register from './components/Login/Register'
 import Login from './components/Login/Login'
 import Appartment from './components/HostAccountPage/components/Appartments/Appartment'
+import SingleApartmentCard from './components/Apartments/SingleApartmentCard'
 
 
 
@@ -48,6 +49,8 @@ function App() {
                 <Route path="/admin/Cities" component={Cities} />
                 <Route path="/admin/Hosts" component={Hosts} />
                 <Route path="/hostaccount/appartments" component={Appartment} />
+                <Route path="/apartment" component={SingleApartmentCard} />
+
 
                 {/* <Route exact path="/login" component={Footer}/> */}
 
