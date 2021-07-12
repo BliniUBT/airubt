@@ -49,6 +49,7 @@ namespace airubt
             services.AddScoped<ICityRepository, CityRepository>();
             services.AddScoped<IApartmentRepository, ApartmentRepository>();
             services.AddScoped<IApartmentService, ApartmentService>();
+            services.AddScoped<IReviewApartament, ReviewApartamentRepo>();
             services.AddScoped<JwtService>();
             services.AddMvc();
             services.AddHttpContextAccessor();
